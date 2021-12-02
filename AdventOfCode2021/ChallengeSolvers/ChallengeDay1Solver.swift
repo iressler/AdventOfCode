@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChallengeDay1Solver {
+struct ChallengeDay1Solver: ChallengeSolver {
   static func getAnswer(challengeNumber: ChallengeNumber, input: String) -> String {
     let depthReadings: [Int]
     if input.isEmpty {
@@ -25,16 +25,13 @@ struct ChallengeDay1Solver {
     }
     switch challengeNumber {
     case .one:
-      return ChallengeDay1Solver().getAnswer1(given: depthReadings)
+      return getAnswer1(given: depthReadings)
     case .two:
-      return ChallengeDay1Solver().getAnswer2(given: depthReadings)
+      return getAnswer2(given: depthReadings)
     }
   }
 
-  private init() {
-  }
-
-  private func getAnswer1(given depthReadings: [Int]) -> String {
+  static private func getAnswer1(given depthReadings: [Int]) -> String {
     guard !depthReadings.isEmpty else {
       return "0"
     }
@@ -50,7 +47,7 @@ struct ChallengeDay1Solver {
     return "\(numberOfIncreases)"
   }
 
-  private func getAnswer2(given depthReadings: [Int]) -> String {
+  static private func getAnswer2(given depthReadings: [Int]) -> String {
     guard depthReadings.count > 3 else {
       return "0"
     }

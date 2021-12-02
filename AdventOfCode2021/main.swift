@@ -14,54 +14,6 @@ private struct TransformationError: Error, CustomStringConvertible {
   let description: String
 }
 
-enum ChallengeDay: Int, CaseIterable {
-  case one = 1
-}
-
-extension ChallengeDay: Comparable {
-  static func < (lhs: ChallengeDay, rhs: ChallengeDay) -> Bool {
-    return lhs.rawValue < rhs.rawValue
-  }
-}
-
-extension ChallengeDay: ExpressibleByArgument {
-  init?(argument: String) {
-    guard let rawValue = Int(argument) else {
-      return nil
-    }
-    self.init(rawValue: rawValue)
-  }
-
-  static var allValueStrings: [String] {
-    return allCases.map({ String($0.rawValue) })
-  }
-}
-
-//ExpressibleByArgument
-enum ChallengeNumber: Int, CaseIterable {
-  case one = 1
-  case two = 2
-}
-
-extension ChallengeNumber: Comparable {
-  static func < (lhs: ChallengeNumber, rhs: ChallengeNumber) -> Bool {
-    return lhs.rawValue < rhs.rawValue
-  }
-}
-
-extension ChallengeNumber: ExpressibleByArgument {
-  init?(argument: String) {
-    guard let rawValue = Int(argument) else {
-      return nil
-    }
-    self.init(rawValue: rawValue)
-  }
-
-  static var allValueStrings: [String] {
-    return allCases.map({ String($0.rawValue) })
-  }
-}
-
 extension Command {
   struct Main: ParsableCommand {
     typealias IntArgument = Comparable & ExpressibleByArgument & CaseIterable & RawRepresentable
@@ -79,7 +31,7 @@ extension Command {
       }
     }
 
-    @Argument(help: "The challenge day number.", transform: Self.transformer()) var dayNumber: ChallengeDay
+    @Argument(help: "The challenge day number.", transform: Self.transformer()) var challengeDay: ChallengeDay
     @Argument(help: "The challenge number.", transform: Self.transformer()) var challengeNumber: ChallengeNumber
     @Argument(help: "The challenge input or a path to a file containing the challenge input") var input: String?
 
@@ -109,12 +61,9 @@ extension Command {
         }
       }
 
-      print("Result for day #\(dayNumber.rawValue) challenge #\(challengeNumber.rawValue):")
+      print("Result for day #\(challengeDay.rawValue) challenge #\(challengeNumber.rawValue):")
 
-      switch dayNumber {
-      case .one:
-        printResult(ChallengeDay1Solver.getAnswer(challengeNumber: challengeNumber, input: input))
-      }
+      printResult(challengeDay.solver.getAnswer(challengeNumber: challengeNumber, input: input))
     }
   }
 }
