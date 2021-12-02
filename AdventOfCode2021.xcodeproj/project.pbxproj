@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8DF48E5B275930BC00D46B61 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E5A275930BC00D46B61 /* main.swift */; };
 		8DF48E63275931A500D46B61 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF48E62275931A500D46B61 /* ArgumentParser */; };
-		8DF48E652759369400D46B61 /* ChallengeDay1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E642759369400D46B61 /* ChallengeDay1.swift */; };
+		8DF48E652759369400D46B61 /* ChallengeDay1Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E642759369400D46B61 /* ChallengeDay1Solver.swift */; };
 		8DF48E682759492D00D46B61 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E672759492D00D46B61 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		8DF48E57275930BC00D46B61 /* AdventOfCode2021 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2021; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF48E5A275930BC00D46B61 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		8DF48E642759369400D46B61 /* ChallengeDay1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDay1.swift; sourceTree = "<group>"; };
+		8DF48E642759369400D46B61 /* ChallengeDay1Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDay1Solver.swift; sourceTree = "<group>"; };
 		8DF48E6627593A4900D46B61 /* AdventOfCode2021.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdventOfCode2021.entitlements; sourceTree = "<group>"; };
 		8DF48E672759492D00D46B61 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,12 +64,20 @@
 		8DF48E59275930BC00D46B61 /* AdventOfCode2021 */ = {
 			isa = PBXGroup;
 			children = (
+				8DF48E6927594CF100D46B61 /* ChallengeSolvers */,
 				8DF48E6627593A4900D46B61 /* AdventOfCode2021.entitlements */,
 				8DF48E5A275930BC00D46B61 /* main.swift */,
-				8DF48E642759369400D46B61 /* ChallengeDay1.swift */,
 				8DF48E672759492D00D46B61 /* Utility.swift */,
 			);
 			path = AdventOfCode2021;
+			sourceTree = "<group>";
+		};
+		8DF48E6927594CF100D46B61 /* ChallengeSolvers */ = {
+			isa = PBXGroup;
+			children = (
+				8DF48E642759369400D46B61 /* ChallengeDay1Solver.swift */,
+			);
+			path = ChallengeSolvers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DF48E652759369400D46B61 /* ChallengeDay1.swift in Sources */,
+				8DF48E652759369400D46B61 /* ChallengeDay1Solver.swift in Sources */,
 				8DF48E5B275930BC00D46B61 /* main.swift in Sources */,
 				8DF48E682759492D00D46B61 /* Utility.swift in Sources */,
 			);

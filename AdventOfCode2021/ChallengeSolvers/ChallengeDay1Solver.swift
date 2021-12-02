@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChallengeDay1 {
+struct ChallengeDay1Solver {
   static func getAnswer(challengeNumber: ChallengeNumber, input: String) -> String {
     let depthReadings: [Int]
     if input.isEmpty {
@@ -25,9 +25,9 @@ struct ChallengeDay1 {
     }
     switch challengeNumber {
     case .one:
-      return ChallengeDay1().getAnswer1(given: depthReadings)
+      return ChallengeDay1Solver().getAnswer1(given: depthReadings)
     case .two:
-      return ChallengeDay1().getAnswer2(given: depthReadings)
+      return ChallengeDay1Solver().getAnswer2(given: depthReadings)
     }
   }
 

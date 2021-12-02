@@ -113,7 +113,7 @@ extension Command {
 
       switch dayNumber {
       case .one:
-        printResult(ChallengeDay1.getAnswer(challengeNumber: challengeNumber, input: input))
+        printResult(ChallengeDay1Solver.getAnswer(challengeNumber: challengeNumber, input: input))
       }
     }
   }
