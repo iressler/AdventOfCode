@@ -18,6 +18,7 @@
 		8DF48E742759D93200D46B61 /* Challenge2021Day3Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E732759D93200D46B61 /* Challenge2021Day3Solver.swift */; };
 		8DF48E8D275AB94600D46B61 /* CHallengeYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E8C275AB94600D46B61 /* CHallengeYear.swift */; };
 		8DF48E8F275AB97900D46B61 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E8E275AB97900D46B61 /* Challenge.swift */; };
+		8DF48E92275ABD6600D46B61 /* Challenge2020Day1Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E91275ABD6600D46B61 /* Challenge2020Day1Solver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		8DF48E8A275AB7A200D46B61 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8DF48E8C275AB94600D46B61 /* CHallengeYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHallengeYear.swift; sourceTree = "<group>"; };
 		8DF48E8E275AB97900D46B61 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		8DF48E91275ABD6600D46B61 /* Challenge2020Day1Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge2020Day1Solver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF48E6C27594DDC00D46B61 /* ChallengeSolver.swift */,
+				8DF48E90275ABD5300D46B61 /* 2020 */,
 				8DF48E8B275AB88400D46B61 /* 2021 */,
 			);
 			path = ChallengeSolvers;
@@ -109,6 +112,14 @@
 				8DF48E732759D93200D46B61 /* Challenge2021Day3Solver.swift */,
 			);
 			path = 2021;
+			sourceTree = "<group>";
+		};
+		8DF48E90275ABD5300D46B61 /* 2020 */ = {
+			isa = PBXGroup;
+			children = (
+				8DF48E91275ABD6600D46B61 /* Challenge2020Day1Solver.swift */,
+			);
+			path = 2020;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				8DF48E5B275930BC00D46B61 /* main.swift in Sources */,
 				8DF48E742759D93200D46B61 /* Challenge2021Day3Solver.swift in Sources */,
 				8DF48E6D27594DDC00D46B61 /* ChallengeSolver.swift in Sources */,
+				8DF48E92275ABD6600D46B61 /* Challenge2020Day1Solver.swift in Sources */,
 				8DF48E712759504200D46B61 /* ChallengeNumber.swift in Sources */,
 				8DF48E6B27594DCE00D46B61 /* Challenge2021Day2Solver.swift in Sources */,
 				8DF48E682759492D00D46B61 /* Utility.swift in Sources */,

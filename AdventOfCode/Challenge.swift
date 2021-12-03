@@ -20,6 +20,7 @@ struct Challenge {
 
   private var solvers: [ChallengeYear: [ChallengeSolver.Type]] = [
     .twentyTwenty: [
+      Challenge2020Day1Solver.self
     ],
     .twentyTwentyOne: [
       Challenge2021Day1Solver.self,
