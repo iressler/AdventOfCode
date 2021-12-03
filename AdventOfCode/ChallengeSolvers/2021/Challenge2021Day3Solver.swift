@@ -37,16 +37,11 @@ private extension String {
 }
 
 struct Challenge2021Day3Solver: ChallengeSolver {
+  static let defaultValue: String = "00100 11110 10110 10111 10101 01111 00111 11100 10000 11001 00010 01010"
+
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let binary: [String]
-    if input.isEmpty {
-      binary = ["00100", "11110", "10110", "10111", "10101", "01111", "00111", "11100", "10000", "11001", "00010", "01010"]
-      printDefaultValueMessage(binary)
-    } else {
-      binary = input
-        .components(separatedBy: .whitespacesAndNewlines.union(CharacterSet(charactersIn: ",")))
-        .filter({ !$0.isEmpty })
-    }
+    let binary = components(from: input)
+      .filter({ !$0.isEmpty })
 
     switch challengeNumber {
     case .one:

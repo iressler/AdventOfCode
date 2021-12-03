@@ -31,17 +31,11 @@ struct Challenge2021Day2Solver: ChallengeSolver {
     }
   }
 
-  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let commandStrings: [String]
+  static let defaultValue: String = "forward 5 down 5 forward 8 up 3 down 8 forward 2"
 
-    if input.isEmpty {
-      commandStrings = ["forward", "5", "down", "5", "forward", "8", "up", "3", "down", "8", "forward", "2"]
-      printDefaultValueMessage(commandStrings)
-    } else {
-      commandStrings = input
-        .components(separatedBy: .whitespacesAndNewlines.union(CharacterSet(charactersIn: ",")))
-        .filter({ !$0.isEmpty })
-    }
+  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
+    let commandStrings = components(from: input)
+      .filter({ !$0.isEmpty })
 
     var commands: [Command] = []
     var index = 0
@@ -49,6 +43,7 @@ struct Challenge2021Day2Solver: ChallengeSolver {
       commands.append(Command(direction: commandStrings[index], distance: commandStrings[index + 1])!)
       index += 2
     }
+
     switch challengeNumber {
     case .one:
       return getAnswer1(given: commands)

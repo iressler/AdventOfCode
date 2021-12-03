@@ -9,8 +9,21 @@ import Foundation
 
 protocol ChallengeSolver {
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String
+  static var defaultValue: String { get }
 }
 
+extension ChallengeSolver {
+  static func components(from input: String) -> [String] {
+    let value: String
+    if !input.isEmpty {
+      value = input
+    } else {
+      value = defaultValue
+      printDefaultValueMessage(value)
+    }
+    return value.components(separatedBy: .whitespacesAndNewlines.union(CharacterSet(charactersIn: ",")))
+  }
+}
 
 // Prototype solver implementation.
 //struct ChallengeDaySolver: ChallengeSolver {
