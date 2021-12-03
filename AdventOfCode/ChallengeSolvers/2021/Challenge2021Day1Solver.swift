@@ -1,14 +1,14 @@
 //
 //  ChallengeDay1.swift
-//  AdventOfCode2021
+//  AdventOfCode
 //
 //  Created by Isaac Ressler on 12/2/21.
 //
 
 import Foundation
 
-struct ChallengeDay1Solver: ChallengeSolver {
-  static func getAnswer(challengeNumber: ChallengeNumber, input: String) -> String {
+struct Challenge2021Day1Solver: ChallengeSolver {
+  static func solution(number: ChallengeNumber, for input: String) -> String {
     let depthReadings: [Int]
     if input.isEmpty {
       depthReadings = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
@@ -23,7 +23,7 @@ struct ChallengeDay1Solver: ChallengeSolver {
           return Int(subString)
         })
     }
-    switch challengeNumber {
+    switch number {
     case .one:
       return getAnswer1(given: depthReadings)
     case .two:

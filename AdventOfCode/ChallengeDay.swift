@@ -1,6 +1,6 @@
 //
 //  ChallengeDay.swift
-//  AdventOfCode2021
+//  AdventOfCode
 //
 //  Created by Isaac Ressler on 12/2/21.
 //
@@ -14,9 +14,9 @@ enum ChallengeDay: Int, CaseIterable {
   case three
 
   private static var solvers: [ChallengeSolver.Type] = [
-    ChallengeDay1Solver.self,
-    ChallengeDay2Solver.self,
-    ChallengeDay3Solver.self
+    Challenge2021Day1Solver.self,
+    Challenge2021Day2Solver.self,
+    Challenge2021Day3Solver.self
   ]
   var solver: ChallengeSolver.Type {
     return Self.solvers[rawValue - 1]

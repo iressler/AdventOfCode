@@ -1,13 +1,13 @@
 //
 //  ChallengeDay2Solver.swift
-//  AdventOfCode2021
+//  AdventOfCode
 //
 //  Created by Isaac Ressler on 12/2/21.
 //
 
 import Foundation
 
-struct ChallengeDay2Solver: ChallengeSolver {
+struct Challenge2021Day2Solver: ChallengeSolver {
   private enum Direction: String {
     case forward
     case up
@@ -31,7 +31,7 @@ struct ChallengeDay2Solver: ChallengeSolver {
     }
   }
 
-  static func getAnswer(challengeNumber: ChallengeNumber, input: String) -> String {
+  static func solution(number: ChallengeNumber, for input: String) -> String {
     let commandStrings: [String]
 
     if input.isEmpty {
@@ -49,7 +49,7 @@ struct ChallengeDay2Solver: ChallengeSolver {
       commands.append(Command(direction: commandStrings[index], distance: commandStrings[index + 1])!)
       index += 2
     }
-    switch challengeNumber {
+    switch number {
     case .one:
       return getAnswer1(given: commands)
     case .two:

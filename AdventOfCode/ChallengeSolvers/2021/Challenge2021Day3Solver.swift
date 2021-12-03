@@ -1,6 +1,6 @@
 //
 //  ChallengeDay3Solver.swift
-//  AdventOfCode2021
+//  AdventOfCode
 //
 //  Created by Isaac Ressler on 12/2/21.
 //
@@ -36,8 +36,8 @@ private extension String {
   }
 }
 
-struct ChallengeDay3Solver: ChallengeSolver {
-  static func getAnswer(challengeNumber: ChallengeNumber, input: String) -> String {
+struct Challenge2021Day3Solver: ChallengeSolver {
+  static func solution(number: ChallengeNumber, for input: String) -> String {
     let binary: [String]
     if input.isEmpty {
       binary = ["00100", "11110", "10110", "10111", "10101", "01111", "00111", "11100", "10000", "11001", "00010", "01010"]
@@ -48,7 +48,7 @@ struct ChallengeDay3Solver: ChallengeSolver {
         .filter({ !$0.isEmpty })
     }
 
-    switch challengeNumber {
+    switch number {
     case .one:
       return getAnswer1(given: binary)
     case .two:

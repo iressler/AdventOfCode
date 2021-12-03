@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  AdventOfCode2021
+//  AdventOfCode
 //
 //  Created by Isaac Ressler on 12/2/21.
 //
@@ -17,6 +17,7 @@ private struct TransformationError: Error, CustomStringConvertible {
 extension Command {
   struct Main: ParsableCommand {
     typealias IntArgument = Comparable & ExpressibleByArgument & CaseIterable & RawRepresentable
+
     static func transformer<T: IntArgument>() -> (String) throws -> T {
       return { input in
         guard let number = T(argument: input) else {
@@ -31,6 +32,7 @@ extension Command {
       }
     }
 
+    @Argument(help: "The challenge year.", transform: Self.transformer()) var challengeYear: ChallengeYear
     @Argument(help: "The challenge day number.", transform: Self.transformer()) var challengeDay: ChallengeDay
     @Argument(help: "The challenge number.", transform: Self.transformer()) var challengeNumber: ChallengeNumber
     @Argument(help: "The challenge input or a path to a file containing the challenge input") var input: String?
@@ -38,7 +40,7 @@ extension Command {
     static var configuration: CommandConfiguration {
       .init(
         commandName: "AdventOfCode",
-        abstract: "A program to solve the Advent of Code 2021 challenges",
+        abstract: "A program to solve the Advent of Code challenges",
         version: "1.0",
         subcommands: []
       )
@@ -61,9 +63,10 @@ extension Command {
         }
       }
 
-      print("Result for day #\(challengeDay.rawValue) challenge #\(challengeNumber.rawValue):")
+      let challenge = Challenge(year: challengeYear, day: challengeDay, number: challengeNumber)
 
-      printResult(challengeDay.solver.getAnswer(challengeNumber: challengeNumber, input: input))
+      print("Solution for day #\(challengeDay.rawValue) challenge #\(challengeNumber.rawValue):")
+      printResult(challenge.solution(for: input))
     }
   }
 }
