@@ -11,8 +11,13 @@ import ArgumentParser
 enum ChallengeDay: Int, CaseIterable {
   case one = 1
   case two
+  case three
 
-  private static var solvers: [ChallengeSolver.Type] = [ChallengeDay1Solver.self, ChallengeDay2Solver.self]
+  private static var solvers: [ChallengeSolver.Type] = [
+    ChallengeDay1Solver.self,
+    ChallengeDay2Solver.self,
+    ChallengeDay3Solver.self
+  ]
   var solver: ChallengeSolver.Type {
     return Self.solvers[rawValue - 1]
   }
