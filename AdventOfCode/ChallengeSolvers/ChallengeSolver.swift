@@ -13,7 +13,7 @@ protocol ChallengeSolver {
 }
 
 extension ChallengeSolver {
-  static func components(from input: String) -> [String] {
+  static func components(from input: String, additionalSeparators: String = "") -> [String] {
     let value: String
     if !input.isEmpty {
       value = input
@@ -21,12 +21,13 @@ extension ChallengeSolver {
       value = defaultValue
       printDefaultValueMessage(value)
     }
-    return value.components(separatedBy: .whitespacesAndNewlines.union(CharacterSet(charactersIn: ",")))
+    return value.components(separatedBy: .whitespacesAndNewlines.union(CharacterSet(charactersIn: "," + additionalSeparators)))
   }
 }
 
 // Prototype solver implementation.
 //struct ChallengeDaySolver: ChallengeSolver {
+//  static let defaultValue = ""
 //  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
 //    switch challengeNumber {
 //    case .one:
