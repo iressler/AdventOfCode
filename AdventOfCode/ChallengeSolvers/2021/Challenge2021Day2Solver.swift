@@ -31,7 +31,7 @@ struct Challenge2021Day2Solver: ChallengeSolver {
     }
   }
 
-  static func solution(number: ChallengeNumber, for input: String) -> String {
+  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
     let commandStrings: [String]
 
     if input.isEmpty {
@@ -49,7 +49,7 @@ struct Challenge2021Day2Solver: ChallengeSolver {
       commands.append(Command(direction: commandStrings[index], distance: commandStrings[index + 1])!)
       index += 2
     }
-    switch number {
+    switch challengeNumber {
     case .one:
       return getAnswer1(given: commands)
     case .two:

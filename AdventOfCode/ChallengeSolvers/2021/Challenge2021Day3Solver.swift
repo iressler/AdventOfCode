@@ -37,7 +37,7 @@ private extension String {
 }
 
 struct Challenge2021Day3Solver: ChallengeSolver {
-  static func solution(number: ChallengeNumber, for input: String) -> String {
+  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
     let binary: [String]
     if input.isEmpty {
       binary = ["00100", "11110", "10110", "10111", "10101", "01111", "00111", "11100", "10000", "11001", "00010", "01010"]
@@ -48,7 +48,7 @@ struct Challenge2021Day3Solver: ChallengeSolver {
         .filter({ !$0.isEmpty })
     }
 
-    switch number {
+    switch challengeNumber {
     case .one:
       return getAnswer1(given: binary)
     case .two:

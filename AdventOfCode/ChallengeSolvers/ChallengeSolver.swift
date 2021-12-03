@@ -8,13 +8,13 @@
 import Foundation
 
 protocol ChallengeSolver {
-  static func solution(number: ChallengeNumber, for input: String) -> String
+  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String
 }
 
 
 // Prototype solver implementation.
 //struct ChallengeDaySolver: ChallengeSolver {
-//  static func getAnswer(challengeNumber: ChallengeNumber, input: String) -> String {
+//  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
 //    switch challengeNumber {
 //    case .one:
 //      return getAnswer1(given: input)

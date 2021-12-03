@@ -8,7 +8,7 @@
 import Foundation
 
 struct Challenge2021Day1Solver: ChallengeSolver {
-  static func solution(number: ChallengeNumber, for input: String) -> String {
+  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
     let depthReadings: [Int]
     if input.isEmpty {
       depthReadings = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
@@ -23,7 +23,7 @@ struct Challenge2021Day1Solver: ChallengeSolver {
           return Int(subString)
         })
     }
-    switch number {
+    switch challengeNumber {
     case .one:
       return getAnswer1(given: depthReadings)
     case .two:
