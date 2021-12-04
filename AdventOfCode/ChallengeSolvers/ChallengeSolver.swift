@@ -13,7 +13,7 @@ protocol ChallengeSolver {
 }
 
 extension ChallengeSolver {
-  static func components(from input: String, additionalSeparators: String = "") -> [String] {
+  static func components(from input: String) -> [String] {
     let value: String
     if !input.isEmpty {
       value = input
@@ -21,7 +21,7 @@ extension ChallengeSolver {
       value = defaultValue
       printDefaultValueMessage(value)
     }
-    return value.components(separatedBy: .whitespacesAndNewlines.union(CharacterSet(charactersIn: "," + additionalSeparators)))
+    return value.components(separatedBy: .newlines).filter({ !$0.isEmpty })
   }
 }
 

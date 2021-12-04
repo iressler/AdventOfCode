@@ -8,18 +8,15 @@
 import Foundation
 
 struct Challenge2020Day2Solver: ChallengeSolver {
-  static let defaultValue = "1-3 a: abcde 1-3 b: cdefg 2-9 c: ccccccccc"
+  static let defaultValue = """
+1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc
+"""
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let passwordStrings = components(from: input, additionalSeparators: ":")
-      .filter({ !$0.isEmpty })
-
-    var passwords: [Password] = []
-    var index = 0
-    while index < passwordStrings.count {
-      passwords.append(Password(lengths: passwordStrings[index], character: passwordStrings[index + 1], password: passwordStrings[index + 2]))
-      index += 3
-    }
+    let passwords = components(from: input)
+      .map({ Password(line: $0)! })
 
     switch challengeNumber {
     case .one:
@@ -35,13 +32,25 @@ struct Challenge2020Day2Solver: ChallengeSolver {
     let character: Character
     let password: String
 
-    init(lengths: String, character: String, password: String) {
-      let charCounts = lengths.split(separator: "-")
+    init?(line: String) {
+      let components = line
+        .components(separatedBy: .whitespacesAndNewlines.union(CharacterSet(charactersIn: ":-")))
+        .filter({ !$0.isEmpty })
+      guard components.count == 4 else {
+        return nil
+      }
+      self.init(minLength: components[0],
+                maxLength: components[1],
+                character: components[2],
+                password: components[3]
+      )
+    }
+
+    init(minLength: String, maxLength: String, character: String, password: String) {
       guard character.count == 1,
-      charCounts.count == 2,
-      let minLength = Int(charCounts.first!),
-      let maxLength = Int(charCounts.last!) else {
-        fatalError("Invalid input: \(lengths), \(character), \(password)")
+            let minLength = Int(minLength),
+            let maxLength = Int(maxLength) else {
+        fatalError("Invalid input: \(minLength), \(maxLength), \(character), \(password)")
       }
 
       self.minLength = minLength

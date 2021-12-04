@@ -18,6 +18,15 @@ struct Challenge2021Day2Solver: ChallengeSolver {
     let direction: Direction
     let distance: Int
 
+    init?(line: String) {
+      let components = line.components(separatedBy: .whitespacesAndNewlines)
+      guard components.count == 2 else {
+        return nil
+      }
+
+      self.init(direction: components.first!, distance: components.last!)
+    }
+
     init(direction: Direction, distance: Int) {
       self.direction = direction
       self.distance = distance
@@ -31,18 +40,18 @@ struct Challenge2021Day2Solver: ChallengeSolver {
     }
   }
 
-  static let defaultValue: String = "forward 5 down 5 forward 8 up 3 down 8 forward 2"
+  static let defaultValue: String = """
+forward 5
+down 5
+forward 8
+up 3
+down 8
+forward 2
+"""
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let commandStrings = components(from: input)
-      .filter({ !$0.isEmpty })
-
-    var commands: [Command] = []
-    var index = 0
-    while index < commandStrings.count {
-      commands.append(Command(direction: commandStrings[index], distance: commandStrings[index + 1])!)
-      index += 2
-    }
+    let commands = components(from: input)
+      .map({ Command(line: $0)! })
 
     switch challengeNumber {
     case .one:

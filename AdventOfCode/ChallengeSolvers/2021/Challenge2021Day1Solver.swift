@@ -8,16 +8,22 @@
 import Foundation
 
 struct Challenge2021Day1Solver: ChallengeSolver {
-  static let defaultValue: String = "199 200 208 210 200 207 240 269 260 263"
+  static let defaultValue: String = """
+199
+200
+208
+210
+200
+207
+240
+269
+260
+263
+"""
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
     let depthReadings = components(from: input)
-      .compactMap({ (subString: String) -> Int? in
-        guard !subString.isEmpty else {
-          return nil
-        }
-        return Int(subString)
-      })
+      .map({ Int($0)! })
 
     switch challengeNumber {
     case .one:
