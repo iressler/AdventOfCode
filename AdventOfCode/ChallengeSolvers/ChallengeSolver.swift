@@ -21,13 +21,15 @@ extension ChallengeSolver {
       value = defaultValue
       printDefaultValueMessage(value)
     }
+
     return value.components(separatedBy: .newlines).filter({ !$0.isEmpty })
   }
 }
 
 // Prototype solver implementation.
 //struct ChallengeDaySolver: ChallengeSolver {
-//  static let defaultValue = ""
+//  static let defaultValue = """
+//"""
 //  static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
 //    switch challengeNumber {
 //    case .one:

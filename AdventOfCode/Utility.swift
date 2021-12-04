@@ -8,7 +8,7 @@
 import Foundation
 
 func printDefaultValueMessage<T: CustomStringConvertible>(_ defaultValue: T) {
-  print("No input provided, using default: \(defaultValue)")
+  print("No input provided, using default:\n\(defaultValue)")
 }
 
 func printResult(_ result: String) {
