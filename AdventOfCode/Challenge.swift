@@ -27,7 +27,8 @@ struct Challenge {
     .twentyTwentyOne: [
       Challenge2021Day1Solver.self,
       Challenge2021Day2Solver.self,
-      Challenge2021Day3Solver.self
+      Challenge2021Day3Solver.self,
+      Challenge2021Day4Solver.self
     ]
   ]
 

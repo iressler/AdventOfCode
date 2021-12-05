@@ -12,6 +12,28 @@ enum ChallengeDay: Int, CaseIterable {
   case one = 1
   case two
   case three
+  case four
+  case five
+  case six
+  case seven
+  case eight
+  case nine
+  case ten
+  case eleven
+  case twelve
+  case thirteen
+  case fourteen
+  case fifteen
+  case sixteen
+  case seventeen
+  case eighteen
+  case nineteen
+  case twenty
+  case twentyOne
+  case twentyTwo
+  case twentyThree
+  case twentyFour
+  case twentyFive
 
   private static var solvers: [ChallengeSolver.Type] = [
     Challenge2021Day1Solver.self,

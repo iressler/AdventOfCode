@@ -21,6 +21,7 @@
 		8DF48E92275ABD6600D46B61 /* Challenge2020Day1Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E91275ABD6600D46B61 /* Challenge2020Day1Solver.swift */; };
 		8DF48E94275AC83500D46B61 /* Challenge2020Day2Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E93275AC83500D46B61 /* Challenge2020Day2Solver.swift */; };
 		8DF48E96275B1FB700D46B61 /* Challenge2020Day3Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E95275B1FB700D46B61 /* Challenge2020Day3Solver.swift */; };
+		8DF48E98275C08F800D46B61 /* Challenge2021Day4Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E97275C08F800D46B61 /* Challenge2021Day4Solver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		8DF48E91275ABD6600D46B61 /* Challenge2020Day1Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge2020Day1Solver.swift; sourceTree = "<group>"; };
 		8DF48E93275AC83500D46B61 /* Challenge2020Day2Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge2020Day2Solver.swift; sourceTree = "<group>"; };
 		8DF48E95275B1FB700D46B61 /* Challenge2020Day3Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge2020Day3Solver.swift; sourceTree = "<group>"; };
+		8DF48E97275C08F800D46B61 /* Challenge2021Day4Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge2021Day4Solver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				8DF48E642759369400D46B61 /* Challenge2021Day1Solver.swift */,
 				8DF48E6A27594DCE00D46B61 /* Challenge2021Day2Solver.swift */,
 				8DF48E732759D93200D46B61 /* Challenge2021Day3Solver.swift */,
+				8DF48E97275C08F800D46B61 /* Challenge2021Day4Solver.swift */,
 			);
 			path = 2021;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				8DF48E6F27594E4900D46B61 /* ChallengeDay.swift in Sources */,
 				8DF48E652759369400D46B61 /* Challenge2021Day1Solver.swift in Sources */,
 				8DF48E8D275AB94600D46B61 /* CHallengeYear.swift in Sources */,
+				8DF48E98275C08F800D46B61 /* Challenge2021Day4Solver.swift in Sources */,
 				8DF48E5B275930BC00D46B61 /* main.swift in Sources */,
 				8DF48E742759D93200D46B61 /* Challenge2021Day3Solver.swift in Sources */,
 				8DF48E6D27594DDC00D46B61 /* ChallengeSolver.swift in Sources */,
