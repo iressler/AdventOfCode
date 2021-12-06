@@ -66,7 +66,7 @@ extension Command {
       let challenge = Challenge(year: challengeYear, day: challengeDay, number: challengeNumber)
 
       print("Solution for day #\(challengeDay.rawValue) challenge #\(challengeNumber.rawValue):")
-      printResult(challenge.solution(for: input))
+      print(challenge.solution(for: input))
     }
   }
 }

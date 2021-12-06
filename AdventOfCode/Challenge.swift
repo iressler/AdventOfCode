@@ -29,7 +29,8 @@ struct Challenge {
       Challenge2021Day2Solver.self,
       Challenge2021Day3Solver.self,
       Challenge2021Day4Solver.self,
-      Challenge2021Day5Solver.self
+      Challenge2021Day5Solver.self,
+      Challenge2021Day6Solver.self
     ]
   ]
 
