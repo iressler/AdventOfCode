@@ -214,27 +214,16 @@ struct Challenge2021Day4Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let lines = inputComponents(from: input, dropEmpty: false)
-    let numbers = lines.first!.components(separatedBy: ",").map({ Int($0)! })
+    let groupedLines = groupedInputComponents(from: input)
 
-    var i = 2
-    var boardLines = [String]()
-    var boards = [BingoGame.Board]()
-    while i < lines.count {
-      let currLine = lines[i]
-      if currLine.isEmpty {
-        if !boardLines.isEmpty {
-          boards.append(BingoGame.Board(lines: boardLines))
-          boardLines.removeAll()
-        }
-      } else {
-        boardLines.append(currLine)
-      }
-      i += 1
+    guard groupedLines.count > 1 else {
+      fatalError("Not enough input provided")
     }
-    if !boardLines.isEmpty {
-      boards.append(BingoGame.Board(lines: boardLines))
-    }
+
+    let numbers = groupedLines.first!.first!.components(separatedBy: ",").map({ Int($0)! })
+
+
+    let boards = groupedLines[1..<groupedLines.count].map({ BingoGame.Board(lines: $0) })
     let game = BingoGame(numbers: numbers, boards: boards)
 
     switch challengeNumber {

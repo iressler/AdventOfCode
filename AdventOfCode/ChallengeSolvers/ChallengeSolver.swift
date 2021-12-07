@@ -14,7 +14,7 @@ protocol ChallengeSolver {
 
 extension ChallengeSolver {
   static func inputComponents(from input: String, separators: String, dropEmpty: Bool = true) -> [String] {
-    return self.inputComponents(from: input, separators: .newlines.union(CharacterSet(charactersIn: separators)), dropEmpty: dropEmpty)
+    return self.inputComponents(from: input, separators: CharacterSet(charactersIn: separators), dropEmpty: dropEmpty)
   }
 
   static func inputComponents(from input: String, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> [String] {
@@ -27,7 +27,6 @@ extension ChallengeSolver {
     }
 
     return components(from: value, separators: separators, dropEmpty: dropEmpty)
-
   }
 
   static func components(from string: String, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> [String] {
@@ -37,6 +36,32 @@ extension ChallengeSolver {
     } else {
       return lines
     }
+  }
+
+
+  static func groupedInputComponents(from input: String, separators: String) -> [[String]] {
+    return self.groupedInputComponents(from: input, separators: .newlines.union(CharacterSet(charactersIn: separators)))
+  }
+
+  static func groupedInputComponents(from input: String, separators: CharacterSet = .newlines) -> [[String]] {
+    let lines = inputComponents(from: input, separators: separators, dropEmpty: false)
+
+    var groups = [[String]]()
+    var currGroup = [String]()
+    for line in lines {
+      if line.isEmpty {
+        groups.append(currGroup)
+        currGroup.removeAll()
+      } else {
+        currGroup.append(line)
+      }
+    }
+
+    if !currGroup.isEmpty {
+      groups.append(currGroup)
+    }
+
+    return groups
   }
 }
 

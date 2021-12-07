@@ -172,24 +172,19 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
     } else {
       chosenInput = input
     }
-    let lines = inputComponents(from: chosenInput, separators: .whitespacesAndNewlines, dropEmpty: false)
-
-    var passports = [Passport]()
-
-//    print("Converting to passports: \(lines)")
-    var passportFields = [String: String]()
-    for line in lines {
-      if line.isEmpty {
-        passports.append(Passport(fields: passportFields)!)
-        passportFields.removeAll()
-      } else {
-        let components = components(from: line, separators: .whitespaces.union(CharacterSet(charactersIn: ":")), dropEmpty: true)
+    let passports = groupedInputComponents(from: chosenInput).map { (fieldLines: [String]) -> Passport in
+      print("Passport from: \(fieldLines)")
+      var fields = [String: String]()
+      for fieldLine in fieldLines {
+        let components = components(from: fieldLine, separators: .whitespaces.union(CharacterSet(charactersIn: ":")), dropEmpty: true)
         for i in stride(from: 0, to: components.count, by: 2) {
-          passportFields[components[i]] = components[i+1]
+          fields[components[i]] = components[i+1]
         }
       }
+      return Passport(fields: fields)!
     }
 
+    print(passports)
     switch challengeNumber {
     case .one:
       return getAnswer1(given: passports)
@@ -199,7 +194,6 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
   }
 
   static private func getAnswer1(given passports: [Passport]) -> String {
-//    print("Testing \(passports.count) passports.")
     return "\(passports.filter({ $0.isValid() }).count)"
   }
 
