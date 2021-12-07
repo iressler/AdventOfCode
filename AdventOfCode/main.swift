@@ -60,6 +60,8 @@ extension Command {
             print("Failed to load input from \(url.path)")
             throw error
           }
+        } else {
+          input = tempInput
         }
       }
 
