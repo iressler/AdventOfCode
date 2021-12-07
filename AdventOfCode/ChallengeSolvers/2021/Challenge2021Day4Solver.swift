@@ -10,15 +10,6 @@ import Foundation
 struct Challenge2021Day4Solver: ChallengeSolver {
   struct BingoGame {
     struct Board: Equatable, CustomStringConvertible {
-      private struct Point: CustomStringConvertible {
-        let row: Int
-        let column: Int
-
-        var description: String {
-          return "\(row), \(column)"
-        }
-      }
-
       struct Entry: CustomStringConvertible {
         let number: Int
         var marked: Bool = false

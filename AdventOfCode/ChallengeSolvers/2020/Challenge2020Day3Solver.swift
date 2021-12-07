@@ -98,9 +98,3 @@ private extension String.Element {
     return self == "#"
   }
 }
-
-extension Array {
-  subscript(wrapping index: Index) -> Element {
-    return self[((index % count) + count) % count]
-  }
-}

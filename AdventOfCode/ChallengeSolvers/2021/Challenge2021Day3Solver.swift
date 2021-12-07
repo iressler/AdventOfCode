@@ -7,35 +7,6 @@
 
 import Foundation
 
-private extension String {
-  // from: https://kalkicode.com/binary-to-decimal-conversion-in-swift
-  func binaryToDecimal() -> Int {
-    let number = Array(self);
-    // Assuming that number contains 0,1s
-    // Used to store result
-    var result: Int = 0;
-    var bit: Int = 0;
-    var n: Int = number.count - 1;
-    // Display Binary number
-//    print("Binary : ", num, terminator: "");
-    // Execute given number in reverse order
-    while (n >= 0)
-    {
-      if (number[n] == "1")
-      {
-        // When get binary 1
-        result += (1 << (bit));
-      }
-      n = n - 1;
-      // Count number of bits
-      bit += 1;
-    }
-    return result
-//    // Display decimal result
-//    print("  Decimal :  ",result);
-  }
-}
-
 struct Challenge2021Day3Solver: ChallengeSolver {
   static let defaultValue: String = """
 00100

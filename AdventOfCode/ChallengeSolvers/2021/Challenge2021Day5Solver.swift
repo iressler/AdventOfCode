@@ -9,39 +9,24 @@ import Foundation
 
 struct Challenge2021Day5Solver: ChallengeSolver {
   struct Map: CustomStringConvertible {
-    struct Point {
-      let x: Int
-      let y: Int
-
-      init(x: Int, y: Int) {
-        self.x = x
-        self.y = y
-      }
-
-      init(pointString: String) {
-        let coordinates = pointString.components(separatedBy: ",")
-        self.init(x: Int(coordinates.last!)!, y: Int(coordinates.first!)!)
-      }
-    }
-
     private let points: [(Point, Point)]
     private(set) var vents: [[Int]]
 
     init(ventMap: [String]) {
       var points = [(Point, Point)]()
-      var maxX = 0
       var maxY = 0
+      var maxX = 0
       for line in ventMap {
         let coordinates = line.components(separatedBy: " -> ")
-        let startPoint = Point(pointString: coordinates.first!)
-        let endPoint = Point(pointString: coordinates.last!)
-        maxX = max(maxX, max(startPoint.x, endPoint.x))
+        let startPoint = Point(pointString: coordinates.first!)!
+        let endPoint = Point(pointString: coordinates.last!)!
         maxY = max(maxY, max(startPoint.y, endPoint.y))
+        maxX = max(maxX, max(startPoint.x, endPoint.x))
         points.append((startPoint, endPoint))
       }
 
       self.points = points
-      self.vents = Array<[Int]>.init(repeating: Array<Int>.init(repeating: 0, count: maxY + 1), count: maxX + 1)
+      self.vents = Array<[Int]>.init(repeating: Array<Int>.init(repeating: 0, count: maxX + 1), count: maxY + 1)
     }
 
     public mutating func addVents(includeDiagonals: Bool) {
@@ -51,24 +36,24 @@ struct Challenge2021Day5Solver: ChallengeSolver {
     }
 
     private mutating func addVents(from startPoint: Point, to endPoint: Point, includeDiagonals: Bool) {
-      if startPoint.x == endPoint.x {
-        addXLine(on: startPoint.x, from: startPoint.y, to: endPoint.y)
-      } else if startPoint.y == endPoint.y {
+      if startPoint.y == endPoint.y {
         addYLine(on: startPoint.y, from: startPoint.x, to: endPoint.x)
+      } else if startPoint.x == endPoint.x {
+        addXLine(on: startPoint.x, from: startPoint.y, to: endPoint.y)
       } else if includeDiagonals {
         addDiagonalLine(from: startPoint, to: endPoint)
       }
     }
 
-    private mutating func addXLine(on x: Int, from: Int, to: Int) {
+    private mutating func addYLine(on y: Int, from: Int, to: Int) {
       for i in min(from, to)...max(from, to) {
-        vents[x][i] += 1
+        vents[y][i] += 1
       }
     }
 
-    private mutating func addYLine(on y: Int, from: Int, to: Int) {
+    private mutating func addXLine(on x: Int, from: Int, to: Int) {
       for i in min(from, to)...max(from, to) {
-        vents[i][y] += 1
+        vents[i][x] += 1
       }
     }
 
@@ -81,10 +66,10 @@ struct Challenge2021Day5Solver: ChallengeSolver {
       let yOperator = startPoint.y > endPoint.y ? subtract : add
 
       func shouldContinue(_ currPoint: Point) -> Bool {
-        if startPoint.x < endPoint.x {
-          return currPoint.x <= endPoint.x
+        if startPoint.y < endPoint.y {
+          return currPoint.y <= endPoint.y
         } else {
-          return currPoint.x >= endPoint.x
+          return currPoint.y >= endPoint.y
         }
       }
 
@@ -92,7 +77,7 @@ struct Challenge2021Day5Solver: ChallengeSolver {
       var currPoint = startPoint
       while shouldContinue(currPoint) {
 //        print("Adding diagonal line at \(currPoint)")
-        vents[currPoint.x][currPoint.y] += 1
+        vents[currPoint.y][currPoint.x] += 1
         currPoint = Point(x: xOperator(currPoint.x), y: yOperator(currPoint.y))
       }
     }
