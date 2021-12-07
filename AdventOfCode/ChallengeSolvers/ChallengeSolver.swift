@@ -36,6 +36,7 @@ extension ChallengeSolver {
 }
 
 // Prototype solver implementation.
+
 //struct ChallengeDaySolver: ChallengeSolver {
 //  static let defaultValue = """
 //"""

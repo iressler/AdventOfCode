@@ -22,7 +22,29 @@ struct Challenge {
     .twentyTwenty: [
       Challenge2020Day1Solver.self,
       Challenge2020Day2Solver.self,
-      Challenge2020Day3Solver.self
+      Challenge2020Day3Solver.self,
+      Challenge2020Day4Solver.self,
+      Challenge2020Day5Solver.self,
+      Challenge2020Day6Solver.self,
+      Challenge2020Day7Solver.self,
+      Challenge2020Day8Solver.self,
+      Challenge2020Day9Solver.self,
+      Challenge2020Day10Solver.self,
+      Challenge2020Day11Solver.self,
+      Challenge2020Day12Solver.self,
+      Challenge2020Day13Solver.self,
+      Challenge2020Day14Solver.self,
+      Challenge2020Day15Solver.self,
+      Challenge2020Day16Solver.self,
+      Challenge2020Day17Solver.self,
+      Challenge2020Day18Solver.self,
+      Challenge2020Day19Solver.self,
+      Challenge2020Day20Solver.self,
+      Challenge2020Day21Solver.self,
+      Challenge2020Day22Solver.self,
+      Challenge2020Day23Solver.self,
+      Challenge2020Day24Solver.self,
+      Challenge2020Day25Solver.self
     ],
     .twentyTwentyOne: [
       Challenge2021Day1Solver.self,
@@ -30,7 +52,26 @@ struct Challenge {
       Challenge2021Day3Solver.self,
       Challenge2021Day4Solver.self,
       Challenge2021Day5Solver.self,
-      Challenge2021Day6Solver.self
+      Challenge2021Day6Solver.self,
+      Challenge2021Day7Solver.self,
+      Challenge2021Day8Solver.self,
+      Challenge2021Day9Solver.self,
+      Challenge2021Day10Solver.self,
+      Challenge2021Day11Solver.self,
+      Challenge2021Day12Solver.self,
+      Challenge2021Day13Solver.self,
+      Challenge2021Day14Solver.self,
+      Challenge2021Day15Solver.self,
+      Challenge2021Day16Solver.self,
+      Challenge2021Day17Solver.self,
+      Challenge2021Day18Solver.self,
+      Challenge2021Day19Solver.self,
+      Challenge2021Day20Solver.self,
+      Challenge2021Day21Solver.self,
+      Challenge2021Day22Solver.self,
+      Challenge2021Day23Solver.self,
+      Challenge2021Day24Solver.self,
+      Challenge2021Day25Solver.self
     ]
   ]
 
