@@ -50,7 +50,7 @@ forward 2
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let commands = components(from: input)
+    let commands = inputComponents(from: input)
       .map({ Command(line: $0)! })
 
     switch challengeNumber {

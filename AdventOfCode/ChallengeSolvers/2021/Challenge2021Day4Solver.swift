@@ -214,7 +214,7 @@ struct Challenge2021Day4Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let lines = components(from: input, dropEmpty: false)
+    let lines = inputComponents(from: input, dropEmpty: false)
     let numbers = lines.first!.components(separatedBy: ",").map({ Int($0)! })
 
     var i = 2

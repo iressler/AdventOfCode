@@ -11,7 +11,7 @@ struct Challenge2021Day7Solver: ChallengeSolver {
   static let defaultValue = "16,1,2,0,4,2,7,1,2,14"
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let crabs = components(from: input, separators: ",").map({ Int($0)! })
+    let crabs = inputComponents(from: input, separators: ",").map({ Int($0)! })
 
     switch challengeNumber {
     case .one:

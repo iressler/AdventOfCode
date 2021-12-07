@@ -116,7 +116,7 @@ struct Challenge2021Day5Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let map = Map(ventMap: components(from: input))
+    let map = Map(ventMap: inputComponents(from: input))
 //    print(map)
     switch challengeNumber {
     case .one:

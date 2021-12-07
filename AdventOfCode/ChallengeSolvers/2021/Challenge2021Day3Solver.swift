@@ -53,7 +53,7 @@ struct Challenge2021Day3Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let lines = components(from: input)
+    let lines = inputComponents(from: input)
       .filter({ !$0.isEmpty })
 
     switch challengeNumber {

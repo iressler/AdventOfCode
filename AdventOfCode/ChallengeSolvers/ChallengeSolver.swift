@@ -13,11 +13,11 @@ protocol ChallengeSolver {
 }
 
 extension ChallengeSolver {
-  static func components(from input: String, separators: String, dropEmpty: Bool = true) -> [String] {
-    return self.components(from: input, separators: .newlines.union(CharacterSet(charactersIn: separators)), dropEmpty: dropEmpty)
+  static func inputComponents(from input: String, separators: String, dropEmpty: Bool = true) -> [String] {
+    return self.inputComponents(from: input, separators: .newlines.union(CharacterSet(charactersIn: separators)), dropEmpty: dropEmpty)
   }
 
-  static func components(from input: String, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> [String] {
+  static func inputComponents(from input: String, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> [String] {
     let value: String
     if !input.isEmpty {
       value = input
@@ -26,7 +26,12 @@ extension ChallengeSolver {
       printDefaultValueMessage(value)
     }
 
-    let lines = value.components(separatedBy: separators)
+    return components(from: value, separators: separators, dropEmpty: dropEmpty)
+
+  }
+
+  static func components(from string: String, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> [String] {
+    let lines = string.components(separatedBy: separators)
     if dropEmpty {
       return lines.filter({ !$0.isEmpty })
     } else {

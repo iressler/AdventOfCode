@@ -15,7 +15,7 @@ struct Challenge2020Day2Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let passwords = components(from: input)
+    let passwords = inputComponents(from: input)
       .map({ Password(line: $0)! })
 
     switch challengeNumber {

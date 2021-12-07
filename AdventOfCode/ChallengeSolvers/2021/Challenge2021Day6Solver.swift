@@ -31,7 +31,7 @@ struct Challenge2021Day6Solver: ChallengeSolver {
   }
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let fishes = components(from: input, separators: ",").map({ Fish(daysUntilReproduction: Int($0)!)})
+    let fishes = inputComponents(from: input, separators: ",").map({ Fish(daysUntilReproduction: Int($0)!)})
 
     switch challengeNumber {
     case .one:

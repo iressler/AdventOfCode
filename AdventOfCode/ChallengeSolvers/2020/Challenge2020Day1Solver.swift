@@ -19,7 +19,7 @@ struct Challenge2020Day1Solver: ChallengeSolver {
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
     print("input: \(input)")
-    let entries = components(from: input)
+    let entries = inputComponents(from: input)
       .map({ Int($0)! })
 
     switch challengeNumber {

@@ -23,7 +23,7 @@ struct Challenge2020Day3Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let trees = components(from: input)
+    let trees = inputComponents(from: input)
       .map({ Array($0) })
 
     switch challengeNumber {

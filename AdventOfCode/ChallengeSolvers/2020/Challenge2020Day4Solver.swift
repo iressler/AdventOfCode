@@ -172,7 +172,7 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
     } else {
       chosenInput = input
     }
-    let lines = components(from: chosenInput, separators: .whitespacesAndNewlines, dropEmpty: false)
+    let lines = inputComponents(from: chosenInput, separators: .whitespacesAndNewlines, dropEmpty: false)
 
     var passports = [Passport]()
 

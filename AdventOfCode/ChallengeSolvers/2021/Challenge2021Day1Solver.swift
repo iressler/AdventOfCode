@@ -22,7 +22,7 @@ struct Challenge2021Day1Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let depthReadings = components(from: input)
+    let depthReadings = inputComponents(from: input)
       .map({ Int($0)! })
 
     switch challengeNumber {

@@ -12,7 +12,7 @@ struct Challenge2021Day16Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let lines = components(from: input)
+    let lines = inputComponents(from: input)
     switch challengeNumber {
     case .one:
       return getAnswer1(given: lines)

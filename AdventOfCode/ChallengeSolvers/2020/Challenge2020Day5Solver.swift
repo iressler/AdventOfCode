@@ -55,7 +55,7 @@ struct Challenge2020Day5Solver: ChallengeSolver {
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
-    let tickets = components(from: input).map({ Ticket(code: $0) })
+    let tickets = inputComponents(from: input).map({ Ticket(code: $0) })
     switch challengeNumber {
     case .one:
       return getAnswer1(given: tickets)
