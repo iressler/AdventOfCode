@@ -10,3 +10,7 @@ import Foundation
 func printDefaultValueMessage<T: CustomStringConvertible>(_ defaultValue: T) {
   print("No input provided, using default:\n\(defaultValue)")
 }
+
+func printDivider(character: String = "=") {
+  print(String(repeating: character, count: 40))
+}
