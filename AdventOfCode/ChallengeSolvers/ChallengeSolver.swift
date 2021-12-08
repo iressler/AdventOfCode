@@ -13,16 +13,16 @@ protocol ChallengeSolver {
 }
 
 extension ChallengeSolver {
-  static func inputComponents(from input: String, separators: String, dropEmpty: Bool = true) -> [String] {
-    return self.inputComponents(from: input, separators: CharacterSet(charactersIn: separators), dropEmpty: dropEmpty)
+  static func inputComponents(from input: String, defaultValue: String? = nil, separators: String, dropEmpty: Bool = true) -> [String] {
+    return self.inputComponents(from: input, defaultValue: defaultValue, separators: CharacterSet(charactersIn: separators), dropEmpty: dropEmpty)
   }
 
-  static func inputComponents(from input: String, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> [String] {
+  static func inputComponents(from input: String, defaultValue: String? = nil, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> [String] {
     let value: String
     if !input.isEmpty {
       value = input
     } else {
-      value = defaultValue
+      value = defaultValue ?? self.defaultValue
       printDefaultValueMessage(value)
     }
 
@@ -39,12 +39,12 @@ extension ChallengeSolver {
   }
 
 
-  static func groupedInputComponents(from input: String, separators: String) -> [[String]] {
-    return self.groupedInputComponents(from: input, separators: .newlines.union(CharacterSet(charactersIn: separators)))
+  static func groupedInputComponents(from input: String, defaultValue: String? = nil, separators: String) -> [[String]] {
+    return self.groupedInputComponents(from: input, defaultValue: defaultValue, separators: .newlines.union(CharacterSet(charactersIn: separators)))
   }
 
-  static func groupedInputComponents(from input: String, separators: CharacterSet = .newlines) -> [[String]] {
-    let lines = inputComponents(from: input, separators: separators, dropEmpty: false)
+  static func groupedInputComponents(from input: String, defaultValue: String? = nil, separators: CharacterSet = .newlines) -> [[String]] {
+    let lines = inputComponents(from: input, defaultValue: defaultValue, separators: separators, dropEmpty: false)
 
     var groups = [[String]]()
     var currGroup = [String]()
