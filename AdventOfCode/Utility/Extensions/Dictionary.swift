@@ -24,3 +24,18 @@ extension Dictionary where Value: AdditiveArithmetic {
     }
   }
 }
+
+extension Dictionary where Value: RangeReplaceableCollection {
+  mutating func appendValue(for key: Key, _ value: Value.Element) {
+    self.appendValues(for: key, Value([value]))
+  }
+
+  mutating func appendValues(for key: Key, _ value: Value) {
+    if var existingValue = self[key] {
+      existingValue.append(contentsOf: value)
+      self[key] = existingValue
+    } else {
+      self[key] = value
+    }
+  }
+}

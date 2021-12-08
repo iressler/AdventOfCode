@@ -70,6 +70,7 @@
 		8DF48EF52760120F00D46B61 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48EF42760120F00D46B61 /* Set.swift */; };
 		8DF48EF72760121D00D46B61 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48EF62760121D00D46B61 /* Dictionary.swift */; };
 		8DF48EFA2760127700D46B61 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48EF92760127700D46B61 /* Point.swift */; };
+		8DF48EFC2760722A00D46B61 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48EFB2760722A00D46B61 /* Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -150,6 +151,7 @@
 		8DF48EF42760120F00D46B61 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		8DF48EF62760121D00D46B61 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		8DF48EF92760127700D46B61 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		8DF48EFB2760722A00D46B61 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 				8DF48EF62760121D00D46B61 /* Dictionary.swift */,
 				8DF48EF42760120F00D46B61 /* Set.swift */,
 				8DF48E672759492D00D46B61 /* String.swift */,
+				8DF48EFB2760722A00D46B61 /* Collection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				8DF48E8F275AB97900D46B61 /* Challenge.swift in Sources */,
 				8DF48EE4275F1F6C00D46B61 /* Challenge2020Day6Solver.swift in Sources */,
 				8DF48EE0275F1F6C00D46B61 /* Challenge2020Day19Solver.swift in Sources */,
+				8DF48EFC2760722A00D46B61 /* Collection.swift in Sources */,
 				8DF48EA0275F1DFB00D46B61 /* Challenge2020Day4Solver.swift in Sources */,
 				8DF48EDA275F1F6C00D46B61 /* Challenge2020Day9Solver.swift in Sources */,
 				8DF48EF72760121D00D46B61 /* Dictionary.swift in Sources */,

@@ -38,7 +38,6 @@ extension ChallengeSolver {
     }
   }
 
-
   static func groupedInputComponents(from input: String, defaultValue: String? = nil, separators: String) -> [[String]] {
     return self.groupedInputComponents(from: input, defaultValue: defaultValue, separators: .newlines.union(CharacterSet(charactersIn: separators)))
   }
