@@ -34,4 +34,17 @@ extension String {
     //    // Display decimal result
     //    print("  Decimal :  ",result);
   }
+
+  // There must be a better way to do this.
+  func enumeratedStrings() -> EnumeratedSequence<[String]> {
+    return Array(self).map({ String($0) }).enumerated()
+  }
+
+  func alphabetized() -> String {
+    return String(sorted())
+  }
+
+  mutating func alphabetize() {
+    self = alphabetized()
+  }
 }

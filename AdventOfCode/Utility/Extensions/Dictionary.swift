@@ -39,3 +39,31 @@ extension Dictionary where Value: RangeReplaceableCollection {
     }
   }
 }
+
+extension Dictionary where Value: RangeReplaceableCollection, Value.Element: Equatable {
+  mutating func removeValue(for key: Key, _ value: Value.Element) {
+    self.removeValues(for: key, Value([value]))
+  }
+
+  mutating func removeValues(for key: Key, _ value: Value) {
+    self[key] = self[key]?.filter({ !value.contains($0)})
+  }
+}
+
+extension Dictionary where Value: Hashable {
+  func inverted() -> Dictionary<Value, Key> {
+    var newDictionary = [Value: Key]()
+
+    for (key, value) in self {
+      newDictionary[value] = key
+    }
+
+    return newDictionary
+  }
+}
+
+extension Dictionary where Key == Value {
+  mutating func invert() {
+    self = inverted()
+  }
+}
