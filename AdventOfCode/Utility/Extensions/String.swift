@@ -37,7 +37,7 @@ extension String {
 
   // There must be a better way to do this.
   func enumeratedStrings() -> EnumeratedSequence<[String]> {
-    return Array(self).map({ String($0) }).enumerated()
+    return toArray().enumerated()
   }
 
   func alphabetized() -> String {
@@ -46,5 +46,9 @@ extension String {
 
   mutating func alphabetize() {
     self = alphabetized()
+  }
+
+  func toArray() -> [String] {
+    return Array(self).map({ String($0) })
   }
 }

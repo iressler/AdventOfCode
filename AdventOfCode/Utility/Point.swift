@@ -21,6 +21,9 @@ extension Point {
   }
 }
 
+extension Point: Hashable {
+}
+
 extension Point: ExpressibleByStringLiteral {
   init(stringLiteral value: String) {
     self.init(pointString: value)!
