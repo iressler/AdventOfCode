@@ -10,6 +10,18 @@ import Foundation
 protocol ChallengeSolver {
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String
   static var defaultValue: String { get }
+  static var usedDefaultValue: Bool { get set }
+}
+
+extension ChallengeSolver {
+  static var usedDefaultValue: Bool {
+    get {
+      return false
+    }
+    set {
+      
+    }
+  }
 }
 
 extension ChallengeSolver {
@@ -23,6 +35,7 @@ extension ChallengeSolver {
       value = input
     } else {
       value = defaultValue ?? self.defaultValue
+      usedDefaultValue = true
       printDefaultValueMessage(value)
     }
 
