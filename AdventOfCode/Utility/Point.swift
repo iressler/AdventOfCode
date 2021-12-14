@@ -12,6 +12,7 @@ struct Point {
   let y: Int
 }
 
+// Allow row/column to be aliases for x/y.
 extension Point {
   var row: Int { x }
   var column: Int { y }
@@ -29,17 +30,21 @@ extension Point: ExpressibleByStringLiteral {
     self.init(pointString: value)!
   }
 
-  init?(pointString: String) {
+  init?(pointString: String, rotated: Bool = false) {
     let coordinates = pointString.components(separatedBy: ",")
     guard coordinates.count == 2,
-          let xStr = coordinates.last,
-          let x = Int(xStr),
-          let yStr = coordinates.first,
-          let y = Int(yStr)
+          let firstStr = coordinates.first,
+          let first = Int(firstStr),
+          let lastStr = coordinates.last,
+          let last = Int(lastStr)
     else {
       return nil
     }
-    self.init(x: x, y: y)
+    if rotated {
+      self.init(x: last, y: first)
+    } else {
+      self.init(x: first, y: last)
+    }
   }
 }
 

@@ -58,7 +58,7 @@ fold along x=5
 
     init(points: [Point], folds: [Fold]) {
       self.folds = folds.reversed()
-      self.points = Array<[Bool]>(repeating: Array<Bool>(repeating: false, count: points.map({ $0.y }).max()! + 1), count: points.map({ $0.x }).max()! + 1)
+      self.points = [[Bool]](repeating: false, x: points.map({ $0.x }).max()! + 1, y: points.map({ $0.y }).max()! + 1)
       for point in points {
         self.points[point.x][point.y] = true
       }
@@ -67,7 +67,7 @@ fold along x=5
     @discardableResult
     mutating func fold() -> Bool {
       guard let fold = folds.popLast() else {
-        print("Not more folds")
+        print("No more folds")
         return false
       }
       switch fold.direction {
@@ -120,7 +120,7 @@ fold along x=5
     var folds = [Sheet.Fold]()
 
     for line in lines {
-      if let point = Point(pointString: line) {
+      if let point = Point(pointString: line, rotated: true) {
         points.append(point)
       } else if !line.isEmpty {
         let components = line.components(separatedBy: " ").last!.components(separatedBy: "=")
@@ -147,6 +147,7 @@ fold along x=5
   static private func getAnswer1(given sheet: Sheet) -> String {
     var sheet = sheet
     sheet.fold()
+    print(sheet)
 
     return "\(sheet.points.map({ $0.filter({ $0 } ).count }).sum())"
   }

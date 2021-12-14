@@ -69,8 +69,9 @@ struct Challenge2021Day4Solver: ChallengeSolver {
           for column in 0..<entries[row].count {
             let entry = entries[row][column]
             if entry.number == number {
-              entries[row][column].marked = true
-              return Point(row: row, column: column)
+              let point = Point(row: row, column: column)
+              entries[point].marked = true
+              return point
             }
           }
         }

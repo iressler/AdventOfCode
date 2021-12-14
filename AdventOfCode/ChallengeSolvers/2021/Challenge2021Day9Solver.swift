@@ -52,32 +52,15 @@ struct Challenge2021Day9Solver: ChallengeSolver {
     var points: [Point] = []
   }
 
-  static private func adjacentPoints(for point: Point, using depths: [[Int]]) -> [Point] {
-    var adjacentPoints = [Point]()
-    if point.y > 0 {
-      adjacentPoints.append(Point(x: point.x, y: point.y-1))
-    }
-    if point.y < (depths.count-1) {
-      adjacentPoints.append(Point(x: point.x, y: point.y+1))
-    }
-    if point.x > 0 {
-      adjacentPoints.append(Point(x: point.x-1, y: point.y))
-    }
-    if point.x < (depths[point.y].count-1) {
-      adjacentPoints.append(Point(x: point.x+1, y: point.y))
-    }
-    return adjacentPoints
-  }
-
   static private func basin(for point: Point, using depths: [[Int]]) -> Basin? {
-    let depth = depths[point.y][point.x]
+    let depth = depths[point]
     guard depth < 9 else {
       return nil
     }
 
     var newBasin = Basin(points: [point])
 
-    var adjacentPoints = adjacentPoints(for: point, using: depths)
+    var adjacentPoints = depths.pointsAdjacent(to: point)
 
     while let adjacentPoint = adjacentPoints.popLast() {
       // Should this use a dictionary for faster lookup?
@@ -85,9 +68,9 @@ struct Challenge2021Day9Solver: ChallengeSolver {
         continue
       }
 
-      if depths[adjacentPoint.y][adjacentPoint.x] < 9 {
+      if depths[adjacentPoint] < 9 {
         newBasin.points.append(adjacentPoint)
-        adjacentPoints.append(contentsOf: self.adjacentPoints(for: adjacentPoint, using: depths))
+        adjacentPoints.append(contentsOf: depths.pointsAdjacent(to: adjacentPoint))
       }
     }
 
@@ -95,11 +78,12 @@ struct Challenge2021Day9Solver: ChallengeSolver {
   }
 
   static private func getAnswer2(given depths: [[Int]]) -> String {
+    print(depths.fieldDescription())
     var pointsToBasin = [Point: Basin]()
     var basins = [Basin]()
-    for y in 0..<depths.count {
-      let row = depths[y]
-      for x in 0..<row.count {
+    for x in 0..<depths.count {
+      let row = depths[x]
+      for y in 0..<row.count {
         let point = Point(x: x, y: y)
         // If the point has already been assigned to a basin break
         guard pointsToBasin[point] == nil else {

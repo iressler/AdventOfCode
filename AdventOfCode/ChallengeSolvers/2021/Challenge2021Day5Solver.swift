@@ -20,12 +20,13 @@ struct Challenge2021Day5Solver: ChallengeSolver {
         let coordinates = line.components(separatedBy: " -> ")
         let startPoint = Point(pointString: coordinates.first!)!
         let endPoint = Point(pointString: coordinates.last!)!
-        maxY = max(maxY, max(startPoint.y, endPoint.y))
         maxX = max(maxX, max(startPoint.x, endPoint.x))
+        maxY = max(maxY, max(startPoint.y, endPoint.y))
         points.append((startPoint, endPoint))
       }
 
       self.points = points
+      // maxX/Y + 1 to account for = indexing.
       self.vents = Array<[Int]>.init(repeating: Array<Int>.init(repeating: 0, count: maxX + 1), count: maxY + 1)
     }
 
@@ -83,7 +84,7 @@ struct Challenge2021Day5Solver: ChallengeSolver {
     }
 
     var description: String {
-      return "\n" + vents.map({ "\($0)" }).joined(separator: "\n")
+      return "\n" + vents.fieldDescription()
     }
   }
 
