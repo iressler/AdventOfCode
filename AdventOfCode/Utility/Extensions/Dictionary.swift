@@ -9,14 +9,23 @@ import Foundation
 
 extension Dictionary where Value: AdditiveArithmetic {
   mutating func incrementValue(for key: Key, by value: Value) {
-    incrementValue(for: key, amount: value)
+    changeValue(for: key, by: value)
+  }
+
+  mutating func decrementValue(for key: Key, by value: Value) {
+    // Can only do addition and subtraction on AdditiveArithmetic, so subtract value from 0 to get the negative value.
+    changeValue(for: key, by: .zero - value)
   }
 
   mutating func incrementValue(for key: Key, by value: Value = 1) where Value == IntegerLiteralType {
-    incrementValue(for: key, amount: value)
+    changeValue(for: key, by: value)
   }
 
-  private mutating func incrementValue(for key: Key, amount: Value) {
+  mutating func decrementValue(for key: Key, by value: Value = 1) where Value == IntegerLiteralType {
+    changeValue(for: key, by: -value)
+  }
+
+  private mutating func changeValue(for key: Key, by amount: Value) {
     if let existingValue = self[key] {
       self[key] = existingValue + amount
     } else {
