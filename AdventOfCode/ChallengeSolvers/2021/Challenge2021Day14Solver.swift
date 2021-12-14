@@ -57,9 +57,8 @@ CN -> C
     for _ in 0..<10 {
       var newTemplate = ""
       for index in 0..<(template.count-1) {
-        let startIndex = template.index(template.startIndex, offsetBy: index)
-        newTemplate.append(template[startIndex])
-        let compound = String(template[startIndex...template.index(startIndex, offsetBy: 1)])
+        newTemplate.append(template[unsafe: index])
+        let compound = template.substring(starting: index, length: 2)
         if let newElement = formulas[compound] {
           newTemplate.append(newElement)
         }
@@ -84,8 +83,7 @@ CN -> C
     // Can solve answer 1, but keeping separate because that's how they were solved.
     var components = [String: Int]()
     for i in 0..<(template.count-1) {
-      let startIndex = template.index(template.startIndex, offsetBy: i)
-      components.incrementValue(for: String(template[startIndex...template.index(startIndex, offsetBy: 1)]), by: 1)
+      components.incrementValue(for: template.substring(starting: i, length: 2), by: 1)
     }
 
     for _ in 0..<40 {

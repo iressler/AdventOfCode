@@ -7,6 +7,40 @@
 
 import Foundation
 
+// The methods that use Int as indices are unsafe, but enable easier String manipulation.
+// Not good for production code, but good enough for this.
+extension String {
+  subscript(unsafeCharacter index: Int) -> Character {
+    guard count > index else {
+      fatalError("Trying to access string index after end of string.")
+    }
+    return self[self.index(startIndex, offsetBy: index)]
+  }
+
+  func substring(starting startIndex: Int, length: Int? = nil) -> String {
+    let length = length ?? (count - startIndex)
+    return self[unsafe: startIndex..<startIndex+length]
+  }
+
+  subscript(unsafe index: Int) -> String {
+    return String(self[unsafeCharacter: index])
+  }
+
+  subscript<R: RangeExpression>(unsafe rangeExpression: R) -> String where R.Bound == Int {
+    // Convert any RangeExpression to a Range, which allows offsetting within the String.
+    let range = rangeExpression.relative(to: 0..<count)
+
+    // Fail deterministically if something unsafe is happening.
+    guard !range.isEmpty && range.first! >= 0 && range.last! < count else {
+      fatalError("Unsafe String range access!!")
+    }
+
+    let startIndex = self.index(startIndex, offsetBy: range.first!)
+    let endIndex = self.index(startIndex, offsetBy: range.count)
+    return String(self[startIndex..<endIndex])
+  }
+}
+
 extension String {
   // from: https://kalkicode.com/binary-to-decimal-conversion-in-swift
   func binaryToDecimal() -> Int {

@@ -39,12 +39,11 @@ struct Challenge2020Day5Solver: ChallengeSolver {
     let column: Int
 
     init(code: String) {
-      let codeDividerIndex = code.index(code.startIndex, offsetBy: 7)
-      let rowCode = code[..<codeDividerIndex]
-      let columnCode = code[codeDividerIndex...]
+      let rowCode = code.substring(starting: 0, length: 7)
+      let columnCode = code.substring(starting: 7)
 
-      self.row = Self.location(from: String(rowCode), max: 127)
-      self.column = Self.location(from: String(columnCode), max: 7)
+      self.row = Self.location(from: rowCode, max: 127)
+      self.column = Self.location(from: columnCode, max: 7)
     }
 
     var description: String {

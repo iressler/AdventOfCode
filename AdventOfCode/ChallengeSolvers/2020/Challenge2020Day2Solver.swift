@@ -79,10 +79,8 @@ struct Challenge2020Day2Solver: ChallengeSolver {
   static private func getAnswer2(given passwords: [Password]) -> String {
     var validPasswordCount = 0
     for password in passwords {
-      let firstIndex = password.password.index(password.password.startIndex, offsetBy: password.minLength - 1)
-      let firstIndexMatches = password.password[firstIndex] == password.character
-      let secondIndex = password.password.index(password.password.startIndex, offsetBy: password.maxLength - 1)
-      let secondIndexMatches = password.password[secondIndex] == password.character
+      let firstIndexMatches = password.password[unsafeCharacter: password.minLength - 1] == password.character
+      let secondIndexMatches = password.password[unsafeCharacter: password.maxLength - 1] == password.character
 
       if (firstIndexMatches || secondIndexMatches) && (firstIndexMatches != secondIndexMatches) {
         validPasswordCount += 1

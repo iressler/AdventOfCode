@@ -80,7 +80,7 @@ struct Challenge2021Day3Solver: ChallengeSolver {
     var result = BinaryCount()
 
     for num in binary {
-      if num[num.index(num.startIndex, offsetBy: i)] == "0" {
+      if num[unsafeCharacter: i] == "0" {
         result.countOf0 += 1
       } else {
         result.countOf1 += 1
