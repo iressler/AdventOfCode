@@ -29,7 +29,6 @@ extension Array where Element: Collection, Element.Index == Index {
       return self.map({ $0.map({ description(for: $0) }) })
     }
     var components = [[String]](repeating: [], count: first!.count)
-//    var components = [[String]](repeating: "", x: first!.count, y: count)
     for i in 0..<first!.count {
       for value in self {
         components[i].append(description(for: value[i]))
@@ -49,7 +48,35 @@ extension Array where Element: Collection, Element.Index == Index {
   }
 
   func fieldDescription(separator: String = " ", rotated: Bool = false) -> String {
-    return components(rotated: rotated).map({ $0.joined(separator: separator) }).joined(separator: "\n")
+    var components = self.components(rotated: rotated)
+
+    var maxLength = 0
+    var minLength = Int.max
+    for row in components {
+      for value in row {
+        maxLength = Swift.max(maxLength, value.count)
+        minLength = Swift.min(minLength, value.count)
+      }
+    }
+
+    // If there is any difference in value lengths add padding to make them consistent.
+    if minLength != maxLength {
+      for x in 0..<components.count {
+        for y in 0..<components[x].count {
+          var value = components[x][y]
+          for i in 0..<(maxLength - value.count) {
+            // Keep the value as close to the middle as possible, preferring a leading separator.
+            if i % 2 == 0 {
+              value = separator + value
+            } else {
+              value = value + separator
+            }
+          }
+          components[x][y] = value
+        }
+      }
+    }
+    return components.map({ $0.joined(separator: separator) }).joined(separator: "\n")
   }
 }
 

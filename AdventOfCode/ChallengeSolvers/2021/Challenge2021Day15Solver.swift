@@ -88,11 +88,12 @@ struct Challenge2021Day15Solver: ChallengeSolver {
           pointsToCheck.append(adjacentPoint)
           alreadyCheckedPoints.insert(adjacentPoint)
         }
-        //          print("risk \(nextPoint) -> \(adjacentPoint) = \(risk)")
+//        print("risk \(nextPoint) -> \(adjacentPoint) = \(risk)")
         risks[adjacentPoint] = risk
       }
     }
 
+    // The path taken.
 //    var pathField = riskLevels.map({ $0.map({ " \($0) " }) })
 //
 //    for point in lowestRiskPath(given: riskLevels, risks: risks) {
@@ -100,6 +101,15 @@ struct Challenge2021Day15Solver: ChallengeSolver {
 //    }
 //
 //    print(pathField.fieldDescription())
+
+    // The cost to get to each point.
+//    var costs = riskLevels
+//
+//    for (point, value) in risks {
+//      costs[point] = value
+//    }
+//
+//    print(costs.fieldDescription())
 
     return risks[Point(x: riskLevels.count-1, y: riskLevels.first!.count-1)]!
   }
