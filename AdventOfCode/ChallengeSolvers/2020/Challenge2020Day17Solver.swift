@@ -1,5 +1,5 @@
 //
-//  Challenge2020Day4Solver.swift
+//  Challenge2020Day17Solver.swift
 //  AdventOfCode
 //
 //  Created by Isaac Ressler on 12/6/21.

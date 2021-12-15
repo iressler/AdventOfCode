@@ -1,5 +1,5 @@
 //
-//  Solutions.swift
+//  Solutions2020.swift
 //  AdventOfCodeTests
 //
 //  Created by Isaac Ressler on 12/14/21.

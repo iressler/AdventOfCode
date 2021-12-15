@@ -1,5 +1,5 @@
 //
-//  Inputs.swift
+//  Inputs2021.swift
 //  AdventOfCodeTests
 //
 //  Created by Isaac Ressler on 12/14/21.
