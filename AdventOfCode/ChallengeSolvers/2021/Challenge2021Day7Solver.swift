@@ -53,12 +53,14 @@ struct Challenge2021Day7Solver: ChallengeSolver {
   static private func getAnswer1(given crabs: [Int]) -> String {
     let result = calculateFuelUsage(given: crabs, using: { $0 })
 
-    return "It will cost \(result.fuelUsage) to move all crabs to position: \(result.index)"
+    print("The fuel cost to move all crabs to row \(result.index) is:")
+    return "\(result.fuelUsage)"
   }
 
   static private func getAnswer2(given crabs: [Int]) -> String {
     let result = calculateFuelUsage(given: crabs, using: { $0 * ($0 + 1) / 2 })
 
-    return "It will cost \(result.fuelUsage) to move all crabs to position: \(result.index)"
+    print("The fuel cost to move all crabs to row \(result.index) is:")
+    return "\(result.fuelUsage)"
   }
 }

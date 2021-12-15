@@ -51,6 +51,9 @@ struct Challenge2020Day5Solver: ChallengeSolver {
     }
   }
   static let defaultValue = """
+BFFFBBFRRR
+FFFBBBFRRR
+BBFFBBFRLL
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {

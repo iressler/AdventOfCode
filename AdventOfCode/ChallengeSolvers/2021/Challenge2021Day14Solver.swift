@@ -74,7 +74,7 @@ CN -> C
     let counts = elementCounts.values
     let max = counts.max()!
     let min = counts.min()!
-    return "\(max) - \(min) = \(max - min)"
+    return "\(max - min)"
   }
 
   static private func getAnswer2(given template: String, formulas: [String: String]) -> String {
@@ -107,7 +107,7 @@ CN -> C
     let counts = elementCounts.values
     let max = counts.max()!
     let min = counts.min()!
-    return "\(max) - \(min) = \(max - min)"
+    return "\(max - min)"
   }
 }
 

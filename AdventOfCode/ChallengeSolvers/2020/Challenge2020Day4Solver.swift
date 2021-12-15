@@ -164,16 +164,16 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
     let chosenInput: String
     if input == "valid" {
-      print("Using valid test passports")
+//      print("Using valid test passports")
       chosenInput = validPassportValues
     } else if input == "invalid" {
-      print("Using invalid test passports")
+//      print("Using invalid test passports")
       chosenInput = invalidPassportValues
     } else {
       chosenInput = input
     }
     let passports = groupedInputComponents(from: chosenInput).map { (fieldLines: [String]) -> Passport in
-      print("Passport from: \(fieldLines)")
+//      print("Passport from: \(fieldLines)")
       var fields = [String: String]()
       for fieldLine in fieldLines {
         let components = components(from: fieldLine, separators: .whitespaces.union(CharacterSet(charactersIn: ":")), dropEmpty: true)
@@ -184,7 +184,7 @@ iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
       return Passport(fields: fields)!
     }
 
-    print(passports)
+//    print(passports)
     switch challengeNumber {
     case .one:
       return getAnswer1(given: passports)

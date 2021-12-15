@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ArgumentParser
 
 enum ChallengeDay: Int, CaseIterable {
   case one = 1
@@ -51,6 +50,10 @@ extension ChallengeDay: Comparable {
   }
 }
 
+// The argument parser doesn't work in testing environments, so exclude this from testing builds.
+#if !TESTING
+import ArgumentParser
+
 extension ChallengeDay: ExpressibleByArgument {
   init?(argument: String) {
     guard let rawValue = Int(argument) else {
@@ -63,3 +66,4 @@ extension ChallengeDay: ExpressibleByArgument {
     return allCases.map({ String($0.rawValue) })
   }
 }
+#endif

@@ -1,12 +1,11 @@
 //
-//  CHallengeYear.swift
+//  ChallengeYear.swift
 //  AdventOfCode
 //
 //  Created by Isaac Ressler on 12/3/21.
 //
 
 import Foundation
-import ArgumentParser
 
 enum ChallengeYear: Int, CaseIterable {
   case twentyTwenty = 2020
@@ -18,6 +17,10 @@ extension ChallengeYear: Comparable {
     return lhs.rawValue < rhs.rawValue
   }
 }
+
+// The argument parser doesn't work in testing environments, so exclude this from testing builds.
+#if !TESTING
+import ArgumentParser
 
 extension ChallengeYear: ExpressibleByArgument {
   init?(argument: String) {
@@ -31,3 +34,4 @@ extension ChallengeYear: ExpressibleByArgument {
     return allCases.map({ String($0.rawValue) })
   }
 }
+#endif

@@ -67,10 +67,10 @@ struct Challenge2021Day6Solver: ChallengeSolver {
       counts[fish.daysUntilReproduction] += 1
     }
 
-    for day in 0..<256 {
-      if day < 20 {
-        print("day #\(day): \(counts.reduce(into: 0, { $0 += $1})): \(counts)")
-      }
+    for _ in 0..<256 {
+//      if day < 20 {
+//        print("day #\(day): \(counts.reduce(into: 0, { $0 += $1})): \(counts)")
+//      }
       var newCounts = [Int](repeating: 0, count: maxDays)
       for i in 0..<(maxDays-1) {
         newCounts[i] = counts[i+1]

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ArgumentParser
 
 enum ChallengeNumber: Int, CaseIterable {
   case one = 1
@@ -18,6 +17,10 @@ extension ChallengeNumber: Comparable {
     return lhs.rawValue < rhs.rawValue
   }
 }
+
+// The argument parser doesn't work in testing environments, so exclude this from testing builds.
+#if !TESTING
+import ArgumentParser
 
 extension ChallengeNumber: ExpressibleByArgument {
   init?(argument: String) {
@@ -31,4 +34,4 @@ extension ChallengeNumber: ExpressibleByArgument {
     return allCases.map({ String($0.rawValue) })
   }
 }
-
+#endif
