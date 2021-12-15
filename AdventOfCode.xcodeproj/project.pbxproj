@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6C2416276A86EA00F6165F /* Collection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E203276A7E030075E1FA /* Collection+3d.swift */; };
+		8D6C2417276A86ED00F6165F /* Collection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */; };
 		8DA4E1AE27694CEB0075E1FA /* AdventOfCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1AD27694CEB0075E1FA /* AdventOfCodeTests.swift */; };
 		8DA4E1B5276954330075E1FA /* ChallengeDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E6E27594E4900D46B61 /* ChallengeDay.swift */; };
 		8DA4E1B6276954350075E1FA /* ChallengeYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E8C275AB94600D46B61 /* ChallengeYear.swift */; };
@@ -76,6 +78,8 @@
 		8DA4E1FE27696E400075E1FA /* Inputs2021.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1FB27696E400075E1FA /* Inputs2021.swift */; };
 		8DA4E1FF27696E400075E1FA /* AdventOfCodeTests2021.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1FC27696E400075E1FA /* AdventOfCodeTests2021.swift */; };
 		8DA4E20027696E400075E1FA /* Solutions2021.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1FD27696E400075E1FA /* Solutions2021.swift */; };
+		8DA4E202276A7DDF0075E1FA /* Collection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */; };
+		8DA4E204276A7E030075E1FA /* Collection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E203276A7E030075E1FA /* Collection+3d.swift */; };
 		8DF48E5B275930BC00D46B61 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E5A275930BC00D46B61 /* main.swift */; };
 		8DF48E63275931A500D46B61 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF48E62275931A500D46B61 /* ArgumentParser */; };
 		8DF48E652759369400D46B61 /* Challenge2021Day1Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E642759369400D46B61 /* Challenge2021Day1Solver.swift */; };
@@ -163,6 +167,8 @@
 		8DA4E1FB27696E400075E1FA /* Inputs2021.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inputs2021.swift; sourceTree = "<group>"; };
 		8DA4E1FC27696E400075E1FA /* AdventOfCodeTests2021.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventOfCodeTests2021.swift; sourceTree = "<group>"; };
 		8DA4E1FD27696E400075E1FA /* Solutions2021.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solutions2021.swift; sourceTree = "<group>"; };
+		8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+2d.swift"; sourceTree = "<group>"; };
+		8DA4E203276A7E030075E1FA /* Collection+3d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+3d.swift"; sourceTree = "<group>"; };
 		8DF48E57275930BC00D46B61 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF48E5A275930BC00D46B61 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8DF48E642759369400D46B61 /* Challenge2021Day1Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge2021Day1Solver.swift; sourceTree = "<group>"; };
@@ -402,10 +408,12 @@
 			isa = PBXGroup;
 			children = (
 				8DF48EF22760120100D46B61 /* Array.swift */,
+				8DF48EFB2760722A00D46B61 /* Collection.swift */,
+				8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */,
+				8DA4E203276A7E030075E1FA /* Collection+3d.swift */,
 				8DF48EF62760121D00D46B61 /* Dictionary.swift */,
 				8DF48EF42760120F00D46B61 /* Set.swift */,
 				8DF48E672759492D00D46B61 /* String.swift */,
-				8DF48EFB2760722A00D46B61 /* Collection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -559,6 +567,7 @@
 				8DA4E1E22769545A0075E1FA /* Challenge2021Day21Solver.swift in Sources */,
 				8DA4E1BB2769544C0075E1FA /* Challenge2020Day2Solver.swift in Sources */,
 				8DA4E1DF2769545A0075E1FA /* Challenge2021Day4Solver.swift in Sources */,
+				8D6C2417276A86ED00F6165F /* Collection+2d.swift in Sources */,
 				8DA4E1DC2769545A0075E1FA /* Challenge2021Day19Solver.swift in Sources */,
 				8DA4E1CA276954530075E1FA /* Challenge2020Day14Solver.swift in Sources */,
 				8DA4E1B5276954330075E1FA /* ChallengeDay.swift in Sources */,
@@ -568,6 +577,7 @@
 				8DA4E1D0276954530075E1FA /* Challenge2020Day24Solver.swift in Sources */,
 				8DA4E1F0276954750075E1FA /* Collection.swift in Sources */,
 				8DA4E1C9276954530075E1FA /* Challenge2020Day4Solver.swift in Sources */,
+				8D6C2416276A86EA00F6165F /* Collection+3d.swift in Sources */,
 				8DA4E1BC276954530075E1FA /* Challenge2020Day9Solver.swift in Sources */,
 				8DA4E1EE276954750075E1FA /* Set.swift in Sources */,
 				8DA4E1EA2769545A0075E1FA /* Challenge2021Day7Solver.swift in Sources */,
@@ -614,6 +624,7 @@
 				8DF48EBE275F1EE500D46B61 /* Challenge2021Day13Solver.swift in Sources */,
 				8DF48E652759369400D46B61 /* Challenge2021Day1Solver.swift in Sources */,
 				8DF48EDE275F1F6C00D46B61 /* Challenge2020Day17Solver.swift in Sources */,
+				8DA4E204276A7E030075E1FA /* Collection+3d.swift in Sources */,
 				8DF48E8D275AB94600D46B61 /* ChallengeYear.swift in Sources */,
 				8DF48EB4275F1EE500D46B61 /* Challenge2021Day23Solver.swift in Sources */,
 				8DF48EDC275F1F6C00D46B61 /* Challenge2020Day14Solver.swift in Sources */,
@@ -643,6 +654,7 @@
 				8DF48EB5275F1EE500D46B61 /* Challenge2021Day14Solver.swift in Sources */,
 				8DF48EEC275F1F6C00D46B61 /* Challenge2020Day21Solver.swift in Sources */,
 				8DF48E712759504200D46B61 /* ChallengeNumber.swift in Sources */,
+				8DA4E202276A7DDF0075E1FA /* Collection+2d.swift in Sources */,
 				8DF48E6B27594DCE00D46B61 /* Challenge2021Day2Solver.swift in Sources */,
 				8DF48EB8275F1EE500D46B61 /* Challenge2021Day16Solver.swift in Sources */,
 				8DF48E682759492D00D46B61 /* String.swift in Sources */,
