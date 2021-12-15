@@ -8,21 +8,24 @@
 import Foundation
 
 struct Point {
+  let w: Int
+  let z: Int
   let x: Int
   let y: Int
-  let z: Int
 
   // 2 complete initializers because I'm not sure how to guarantee one doesn't infinite loop instead of calling the other.
-  init(x: Int, y: Int, z: Int = -1) {
+  init(x: Int, y: Int, z: Int = -1, w: Int = -1) {
     self.x = x
     self.y = y
     self.z = z
+    self.w = w
   }
 
-  init(x: Int, y: Int, z: Int? = nil) {
+  init(x: Int, y: Int, z: Int? = nil, w: Int? = nil) {
     self.x = x
     self.y = y
     self.z = z ?? -1
+    self.w = w ?? -1
   }
 }
 
@@ -44,7 +47,7 @@ extension Point: ExpressibleByStringLiteral {
     self.init(pointString: value)!
   }
 
-  // pointString must be formatted "x,y" or "x,y,z", or either of those reversed if rotated is true.
+  // pointString must be formatted "x,y", "x,y,z", or "x,y,z,w" or any of those reversed if rotated is true.
   init?(pointString: String, rotated: Bool = false) {
     let coordinates = pointString.components(separatedBy: ",")
 
@@ -58,14 +61,25 @@ extension Point: ExpressibleByStringLiteral {
       third = nil
     }
 
+    let fourth: Int?
+    if coordinates.count > 3 {
+      fourth = Int(coordinates[3])
+    } else {
+      fourth = nil
+    }
+
+
     if rotated {
       if let third = third {
+        if let fourth = fourth {
+          self.init(x: fourth, y: third, z: second, w: first)
+        }
         self.init(x: third, y: second, z: first)
       } else {
         self.init(x: second, y: first)
       }
     } else {
-      self.init(x: first, y: second, z: third)
+      self.init(x: first, y: second, z: third, w: fourth)
     }
   }
 }
@@ -73,8 +87,11 @@ extension Point: ExpressibleByStringLiteral {
 extension Point: CustomStringConvertible {
   var description: String {
     var description = "\(x),\(y)"
-    if z >= 0 {
+    if z >= 0 || w >= 0 {
       description += ",\(z)"
+      if w >= 0 {
+        description += ",\(w)"
+      }
     }
     return description
   }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D6C2416276A86EA00F6165F /* Collection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E203276A7E030075E1FA /* Collection+3d.swift */; };
 		8D6C2417276A86ED00F6165F /* Collection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */; };
+		8D6C2419276A9A9900F6165F /* Collection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2418276A9A9900F6165F /* Collection+4d.swift */; };
 		8DA4E1AE27694CEB0075E1FA /* AdventOfCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1AD27694CEB0075E1FA /* AdventOfCodeTests.swift */; };
 		8DA4E1B5276954330075E1FA /* ChallengeDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E6E27594E4900D46B61 /* ChallengeDay.swift */; };
 		8DA4E1B6276954350075E1FA /* ChallengeYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E8C275AB94600D46B61 /* ChallengeYear.swift */; };
@@ -159,6 +160,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D6C2418276A9A9900F6165F /* Collection+4d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+4d.swift"; sourceTree = "<group>"; };
 		8DA4E1AB27694CEB0075E1FA /* AdventOfCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventOfCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E1AD27694CEB0075E1FA /* AdventOfCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventOfCodeTests.swift; sourceTree = "<group>"; };
 		8DA4E1F327695C6F0075E1FA /* Inputs2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputs2020.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				8DF48EFB2760722A00D46B61 /* Collection.swift */,
 				8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */,
 				8DA4E203276A7E030075E1FA /* Collection+3d.swift */,
+				8D6C2418276A9A9900F6165F /* Collection+4d.swift */,
 				8DF48EF62760121D00D46B61 /* Dictionary.swift */,
 				8DF48EF42760120F00D46B61 /* Set.swift */,
 				8DF48E672759492D00D46B61 /* String.swift */,
@@ -613,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DF48EFA2760127700D46B61 /* Point.swift in Sources */,
+				8D6C2419276A9A9900F6165F /* Collection+4d.swift in Sources */,
 				8DF48EDF275F1F6C00D46B61 /* Challenge2020Day18Solver.swift in Sources */,
 				8DF48EDD275F1F6C00D46B61 /* Challenge2020Day8Solver.swift in Sources */,
 				8DF48EC4275F1EE500D46B61 /* Challenge2021Day15Solver.swift in Sources */,

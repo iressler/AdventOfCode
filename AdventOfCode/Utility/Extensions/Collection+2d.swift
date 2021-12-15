@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension Collection where Element: Collection, Element.Index == Index, Index == Int {
+extension Collection where Index == Int,
+                           Element: Collection, Element.Index == Index {
   private func components(rotated: Bool) -> [[String]] {
     guard !isEmpty else {
       return []
@@ -67,16 +68,15 @@ extension Collection where Element: Collection, Element.Index == Index, Index ==
     }
     return components.map({ $0.joined(separator: separator) }).joined(separator: "\n")
   }
-}
 
-// Supports non mutable collections, e.g. let bindings?
-extension Collection where Element: Collection, Element.Index == Index, Index == Int {
+  // Supports non mutable collections, e.g. let bindings?
   subscript(point: Point) -> Element.Element {
     return self[point.x][point.y]
   }
 }
 
-extension MutableCollection where Element: MutableCollection, Element.Index == Index, Index == Int {
+extension MutableCollection where Index == Int,
+                                  Element: MutableCollection, Element.Index == Index {
   subscript(point: Point) -> Element.Element {
     get {
       return self[point.x][point.y]
@@ -95,40 +95,40 @@ extension MutableCollection where Element: MutableCollection, Element.Index == I
 
     if yCanGoUp {
       let upY = point.y + 1
-      adjacentPoints.append(Point(x: point.x, y: upY, z: point.z))
+      adjacentPoints.append(Point(x: point.x, y: upY, z: point.z, w: point.w))
 
       // Check the 2 diagonals to the right if including diagonals.
       if includeDiagonals {
         if xCanGoDown {
-          adjacentPoints.append(Point(x: point.x-1, y: upY, z: point.z))
+          adjacentPoints.append(Point(x: point.x-1, y: upY, z: point.z, w: point.w))
         }
         if xCanGoUp {
-          adjacentPoints.append(Point(x: point.x+1, y: upY, z: point.z))
+          adjacentPoints.append(Point(x: point.x+1, y: upY, z: point.z, w: point.w))
         }
       }
     }
 
     if yCanGoDown {
       let downY = point.y - 1
-      adjacentPoints.append(Point(x: point.x, y: downY, z: point.z))
+      adjacentPoints.append(Point(x: point.x, y: downY, z: point.z, w: point.w))
 
       // Check the 2 diagonals to the left if including diagonals.
       if includeDiagonals {
         if xCanGoDown {
-          adjacentPoints.append(Point(x: point.x-1, y: downY, z: point.z))
+          adjacentPoints.append(Point(x: point.x-1, y: downY, z: point.z, w: point.w))
         }
         if xCanGoUp {
-          adjacentPoints.append(Point(x: point.x+1, y: downY, z: point.z))
+          adjacentPoints.append(Point(x: point.x+1, y: downY, z: point.z, w: point.w))
         }
       }
     }
 
     if xCanGoUp {
-      adjacentPoints.append(Point(x: point.x+1, y: point.y, z: point.z))
+      adjacentPoints.append(Point(x: point.x+1, y: point.y, z: point.z, w: point.w))
     }
 
     if xCanGoDown {
-      adjacentPoints.append(Point(x: point.x-1, y: point.y, z: point.z))
+      adjacentPoints.append(Point(x: point.x-1, y: point.y, z: point.z, w: point.w))
     }
 
     return adjacentPoints
