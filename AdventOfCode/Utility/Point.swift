@@ -72,6 +72,10 @@ extension Point: ExpressibleByStringLiteral {
 
 extension Point: CustomStringConvertible {
   var description: String {
-    return "\(row),\(column)"
+    var description = "\(x),\(y)"
+    if z >= 0 {
+      description += ",\(z)"
+    }
+    return description
   }
 }

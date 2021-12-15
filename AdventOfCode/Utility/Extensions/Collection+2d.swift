@@ -95,40 +95,40 @@ extension MutableCollection where Element: MutableCollection, Element.Index == I
 
     if yCanGoUp {
       let upY = point.y + 1
-      adjacentPoints.append(Point(x: point.x, y: upY))
+      adjacentPoints.append(Point(x: point.x, y: upY, z: point.z))
 
       // Check the 2 diagonals to the right if including diagonals.
       if includeDiagonals {
         if xCanGoDown {
-          adjacentPoints.append(Point(x: point.x-1, y: upY))
+          adjacentPoints.append(Point(x: point.x-1, y: upY, z: point.z))
         }
         if xCanGoUp {
-          adjacentPoints.append(Point(x: point.x+1, y: upY))
+          adjacentPoints.append(Point(x: point.x+1, y: upY, z: point.z))
         }
       }
     }
 
     if yCanGoDown {
       let downY = point.y - 1
-      adjacentPoints.append(Point(x: point.x, y: downY))
+      adjacentPoints.append(Point(x: point.x, y: downY, z: point.z))
 
       // Check the 2 diagonals to the left if including diagonals.
       if includeDiagonals {
         if xCanGoDown {
-          adjacentPoints.append(Point(x: point.x-1, y: downY))
+          adjacentPoints.append(Point(x: point.x-1, y: downY, z: point.z))
         }
         if xCanGoUp {
-          adjacentPoints.append(Point(x: point.x+1, y: downY))
+          adjacentPoints.append(Point(x: point.x+1, y: downY, z: point.z))
         }
       }
     }
 
     if xCanGoUp {
-      adjacentPoints.append(Point(x: point.x+1, y: point.y))
+      adjacentPoints.append(Point(x: point.x+1, y: point.y, z: point.z))
     }
 
     if xCanGoDown {
-      adjacentPoints.append(Point(x: point.x-1, y: point.y))
+      adjacentPoints.append(Point(x: point.x-1, y: point.y, z: point.z))
     }
 
     return adjacentPoints
