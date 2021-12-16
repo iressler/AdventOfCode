@@ -25,8 +25,16 @@ extension ChallengeSolver {
 }
 
 extension ChallengeSolver {
+  static func inputComponent(from input: String, defaultValue: String? = nil, separators: String, dropEmpty: Bool = true) -> String {
+    return self.inputComponents(from: input, defaultValue: defaultValue, separators: separators, dropEmpty: dropEmpty).first!
+  }
+
   static func inputComponents(from input: String, defaultValue: String? = nil, separators: String, dropEmpty: Bool = true) -> [String] {
     return self.inputComponents(from: input, defaultValue: defaultValue, separators: CharacterSet(charactersIn: separators), dropEmpty: dropEmpty)
+  }
+
+  static func inputComponent(from input: String, defaultValue: String? = nil, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> String {
+    return self.inputComponents(from: input, defaultValue: defaultValue, separators: separators, dropEmpty: dropEmpty).first!
   }
 
   static func inputComponents(from input: String, defaultValue: String? = nil, separators: CharacterSet = .newlines, dropEmpty: Bool = true) -> [String] {
