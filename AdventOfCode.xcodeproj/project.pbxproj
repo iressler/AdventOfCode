@@ -81,6 +81,7 @@
 		8DA4E20027696E400075E1FA /* Solutions2021.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1FD27696E400075E1FA /* Solutions2021.swift */; };
 		8DA4E202276A7DDF0075E1FA /* Collection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */; };
 		8DA4E204276A7E030075E1FA /* Collection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E203276A7E030075E1FA /* Collection+3d.swift */; };
+		8DCAB954276BABE600CB1BCD /* Collection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2418276A9A9900F6165F /* Collection+4d.swift */; };
 		8DF48E5B275930BC00D46B61 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E5A275930BC00D46B61 /* main.swift */; };
 		8DF48E63275931A500D46B61 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 8DF48E62275931A500D46B61 /* ArgumentParser */; };
 		8DF48E652759369400D46B61 /* Challenge2021Day1Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E642759369400D46B61 /* Challenge2021Day1Solver.swift */; };
@@ -572,6 +573,7 @@
 				8DA4E1DF2769545A0075E1FA /* Challenge2021Day4Solver.swift in Sources */,
 				8D6C2417276A86ED00F6165F /* Collection+2d.swift in Sources */,
 				8DA4E1DC2769545A0075E1FA /* Challenge2021Day19Solver.swift in Sources */,
+				8DCAB954276BABE600CB1BCD /* Collection+4d.swift in Sources */,
 				8DA4E1CA276954530075E1FA /* Challenge2020Day14Solver.swift in Sources */,
 				8DA4E1B5276954330075E1FA /* ChallengeDay.swift in Sources */,
 				8DA4E1F2276954750075E1FA /* Point.swift in Sources */,
