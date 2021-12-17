@@ -258,7 +258,7 @@ struct Challenge2020Day17Solver: ChallengeSolver {
     // Indexed [z][x][y]
     var activeCubes = [cubes]
 
-    for i in 0..<6 {
+    for _ in 0..<6 {
 //      print(activeCubes.fieldDescription())
       addPadding(to: &activeCubes)
 
@@ -273,7 +273,7 @@ struct Challenge2020Day17Solver: ChallengeSolver {
     // Indexed [w][z][x][y]
     var activeCubes = [[cubes]]
 
-    for i in 0..<6 {
+    for _ in 0..<6 {
       //      print(activeCubes.fieldDescription())
       addPadding(to: &activeCubes)
 
