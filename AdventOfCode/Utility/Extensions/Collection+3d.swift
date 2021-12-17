@@ -24,6 +24,11 @@ extension Collection where Index == Int,
   subscript(point: Point) -> Element.Element.Element  {
     return self[point.z][point.x][point.y]
   }
+
+  func contains(point: Point) -> Bool {
+    return point.w >= 0 && point.x >= 0 && point.y >= 0 &&
+    point.w < count && point.x < self[point.w].count && point.y < self[point.w][point.x].count
+  }
 }
 
 extension MutableCollection where Index == Int,
