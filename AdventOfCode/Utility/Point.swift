@@ -8,10 +8,10 @@
 import Foundation
 
 struct Point {
-  let w: Int
-  let z: Int
-  let x: Int
-  let y: Int
+  var w: Int
+  var z: Int
+  var x: Int
+  var y: Int
 
   // 2 complete initializers because I'm not sure how to guarantee one doesn't infinite loop instead of calling the other.
   init(x: Int, y: Int, z: Int = -1, w: Int = -1) {
@@ -31,8 +31,23 @@ struct Point {
 
 // Allow row/column to be aliases for x/y.
 extension Point {
-  var row: Int { x }
-  var column: Int { y }
+  var row: Int {
+    get {
+      return x
+    }
+    set {
+      x = newValue
+    }
+  }
+  var column: Int {
+    get {
+      return y
+    }
+    set {
+      y = newValue
+    }
+  }
+
 
   init(row: Int, column: Int) {
     self.init(x: row, y: column)
