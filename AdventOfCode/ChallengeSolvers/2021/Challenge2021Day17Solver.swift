@@ -107,7 +107,7 @@ struct Challenge2021Day17Solver: ChallengeSolver {
   }
 }
 
-extension Int {
+private extension Int {
   mutating func moveTowardZero(by amount: Int) {
     if self > 0 {
       self -= amount

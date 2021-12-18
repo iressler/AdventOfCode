@@ -22,6 +22,7 @@ extension Collection where Element: Numeric {
 // Could probably generalize this to Index: Numeric (or AdditiveArithmetic?), but that's more complex than necessary.
 extension Collection where Index == Int {
   subscript(wrapping index: Index) -> Element {
-    return self[index % count]
+    // Song and dance of repeated remainder math and addition to handle negative indices.
+    return self[((index % count) + count) % count]
   }
 }
