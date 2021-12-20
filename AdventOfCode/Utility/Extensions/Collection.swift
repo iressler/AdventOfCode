@@ -19,10 +19,26 @@ extension Collection where Element: Numeric {
   }
 }
 
+extension Collection {
+  func min<E: Comparable>() -> E? where Element == Optional<E> {
+    return compactMap().min()
+  }
+
+  func max<E: Comparable>() -> E? where Element == Optional<E> {
+    return compactMap().max()
+  }
+}
+
 // Could probably generalize this to Index: Numeric (or AdditiveArithmetic?), but that's more complex than necessary.
 extension Collection where Index == Int {
   subscript(wrapping index: Index) -> Element {
     // Song and dance of repeated remainder math and addition to handle negative indices.
     return self[((index % count) + count) % count]
+  }
+}
+
+extension Collection {
+  func compactMap<E>() -> [E] where Element == Optional<E> {
+    return compactMap({ $0 })
   }
 }
