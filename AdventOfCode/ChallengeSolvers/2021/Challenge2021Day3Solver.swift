@@ -50,7 +50,7 @@ struct Challenge2021Day3Solver: ChallengeSolver {
         epsilon.append("0")
       }
     }
-    return "\(gamma.binaryToDecimal() * epsilon.binaryToDecimal())"
+    return "\(Int(gamma, radix: 2)! * Int(epsilon, radix: 2)!)"
   }
 
   private struct BinaryCount {
@@ -127,6 +127,6 @@ struct Challenge2021Day3Solver: ChallengeSolver {
       }
     }
 
-    return "\(ogr.binaryToDecimal() * c02.binaryToDecimal())"
+    return "\(Int(ogr, radix: 2)! * Int(c02, radix: 2)!)"
   }
 }

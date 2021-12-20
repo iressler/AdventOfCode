@@ -42,33 +42,16 @@ extension String {
 }
 
 extension String {
-  // from: https://kalkicode.com/binary-to-decimal-conversion-in-swift
-  func binaryToDecimal() -> Int {
-    let number = Array(self);
-    // Assuming that number contains 0,1s
-    // Used to store result
-    var result: Int = 0;
-    var bit: Int = 0;
-    var n: Int = number.count - 1;
-    // Display Binary number
-    //    print("Binary : ", num, terminator: "");
-    // Execute given number in reverse order
-    while (n >= 0)
-    {
-      if (number[n] == "1")
-      {
-        // When get binary 1
-        result += (1 << (bit));
-      }
-      n = n - 1;
-      // Count number of bits
-      bit += 1;
-    }
-    return result
-    //    // Display decimal result
-    //    print("  Decimal :  ",result);
+  subscript(range: NSRange) -> String {
+    (self as NSString).substring(with: range)
   }
 
+  mutating func replaceSubstring(at range: NSRange, with newSubString: String) {
+    self = (self as NSString).replacingCharacters(in: range, with: newSubString)
+  }
+}
+
+extension String {
   // There must be a better way to do this.
   func enumeratedStrings() -> EnumeratedSequence<[String]> {
     return toArray().enumerated()

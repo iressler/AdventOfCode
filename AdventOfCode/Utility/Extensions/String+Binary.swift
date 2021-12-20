@@ -8,6 +8,7 @@
 import Foundation
 
 extension String {
+  // Need this because it's possible for the value to go over `Int.max`.
   func toBinary(radix: Int = 16) -> String? {
     var binary = ""
 

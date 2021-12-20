@@ -49,7 +49,7 @@ struct Challenge2021Day9Solver: ChallengeSolver {
   }
 
   private struct Basin {
-    var points: [Point] = []
+    var points = Set<Point>()
   }
 
   static private func basin(for point: Point, using depths: [[Int]]) -> Basin? {
@@ -63,13 +63,12 @@ struct Challenge2021Day9Solver: ChallengeSolver {
     var adjacentPoints: [Point] = depths.pointsAdjacent(to: point)
 
     while let adjacentPoint = adjacentPoints.popLast() {
-      // Should this use a dictionary for faster lookup?
       guard !newBasin.points.contains(adjacentPoint) else {
         continue
       }
 
       if depths[adjacentPoint] < 9 {
-        newBasin.points.append(adjacentPoint)
+        newBasin.points.insert(adjacentPoint)
         adjacentPoints.append(contentsOf: depths.pointsAdjacent(to: adjacentPoint))
       }
     }

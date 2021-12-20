@@ -40,16 +40,6 @@ extension SnailNumeric {
   }
 }
 
-extension String {
-  subscript(range: NSRange) -> String {
-    (self as NSString).substring(with: range)
-  }
-
-  mutating func replaceSubstring(at range: NSRange, with newSubString: String) {
-    self = (self as NSString).replacingCharacters(in: range, with: newSubString)
-  }
-}
-
 struct Challenge2021Day18Solver: ChallengeSolver {
   static let defaultValue0 = "[5,[[[[[9,8],1],2],3],4]]"
   static let defaultValue1 = "[[[[[9,8],1],2],3],4]"
@@ -295,6 +285,7 @@ struct Challenge2021Day18Solver: ChallengeSolver {
       return (x as? SnailInt) != nil && (y as? SnailInt) != nil
     }
 
+    // Useful for debugging broken parent - child relationships.
     var brokenConnection: Bool {
       var snailNumbers = [self]
       while let snailNumber = snailNumbers.popLast() {
