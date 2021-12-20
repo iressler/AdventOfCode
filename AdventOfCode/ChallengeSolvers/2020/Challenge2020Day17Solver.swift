@@ -158,7 +158,7 @@ struct Challenge2020Day17Solver: ChallengeSolver {
       }
 
       if minW == 0 {
-        activeCubes.insert(newWArray, at: 0)
+        activeCubes.prepend(newWArray)
       } else if wRemovePrefixCount > 0 {
         activeCubes.removeFirst(wRemovePrefixCount)
       }
@@ -180,7 +180,7 @@ struct Challenge2020Day17Solver: ChallengeSolver {
       }
 
       if minZ == 0 {
-        activeCubes.insert(newZArray, at: 0)
+        activeCubes.prepend(newZArray)
       } else if zRemovePrefixCount > 0 {
         activeCubes.removeFirst(zRemovePrefixCount)
       }
@@ -194,7 +194,7 @@ struct Challenge2020Day17Solver: ChallengeSolver {
         }
 
         if minX == 0 {
-          activeCubes[z].insert(newXArray, at: 0)
+          activeCubes[z].prepend(newXArray)
         } else if xRemovePrefixCount > 0 {
           activeCubes[z].removeFirst(xRemovePrefixCount)
         }
@@ -208,7 +208,7 @@ struct Challenge2020Day17Solver: ChallengeSolver {
           }
 
           if minY == 0 {
-            activeCubes[z][x].insert(false, at: 0)
+            activeCubes[z][x].prepend(false)
           } else if yRemovePrefixCount > 0 {
             activeCubes[z][x].removeFirst(yRemovePrefixCount)
           }

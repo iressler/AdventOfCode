@@ -9,7 +9,7 @@ import Foundation
 
 extension Collection where Element: AdditiveArithmetic {
   func sum() -> Element {
-    self.reduce(into: Element.zero, { $0 += $1 })
+    self.reduce(into: .zero, { $0 += $1 })
   }
 }
 
@@ -27,18 +27,23 @@ extension Collection {
   func max<E: Comparable>() -> E? where Element == Optional<E> {
     return compactMap().max()
   }
+
+  func compactMap<E>() -> [E] where Element == Optional<E> {
+    return compactMap({ $0 })
+  }
 }
 
-// Could probably generalize this to Index: Numeric (or AdditiveArithmetic?), but that's more complex than necessary.
-extension Collection where Index == Int {
-  subscript(wrapping index: Index) -> Element {
-    // Song and dance of repeated remainder math and addition to handle negative indices.
-    return self[((index % count) + count) % count]
   }
 }
 
 extension Collection {
-  func compactMap<E>() -> [E] where Element == Optional<E> {
-    return compactMap({ $0 })
+  subscript(unsafe indexOffset: Int) -> Element {
+    return self[index(startIndex, offsetBy: indexOffset)]
+  }
+
+  // Can't generalize to anything like Numeric because it needs to divide by and add to an Int.
+  subscript(wrapping index: Index) -> Element where Index == Int {
+    // Song and dance of repeated remainder math and addition to handle negative indices.
+    return self[((index % count) + count) % count]
   }
 }

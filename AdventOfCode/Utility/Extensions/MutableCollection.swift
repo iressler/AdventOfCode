@@ -17,4 +17,13 @@ extension MutableCollection {
   mutating func modifyElement(at index: Index, using modifier: (Element) -> Element) {
     self[index] = modifier(self[index])
   }
+
+  subscript(unsafe indexOffset: Int) -> Element {
+    get {
+      return self[index(startIndex, offsetBy: indexOffset)]
+    }
+    set {
+      self[index(startIndex, offsetBy: indexOffset)] = newValue
+    }
+  }
 }

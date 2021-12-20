@@ -61,8 +61,8 @@ struct Challenge2020Day18Solver: ChallengeSolver {
       if case .endParenthesis = MathOperator(rawValue: nextChar) {
           var subEquation = [String]()
         while let nextChar = currEquation.popLast(), nextChar != MathOperator.startParenthesis.rawValue {
-            // To get it back in "forwards" order.
-            subEquation.insert(nextChar, at: 0)
+            // Prepend to get it back in "forwards" order.
+            subEquation.prepend(nextChar)
 //            subEquation.append(nextChar)
           }
           currEquation.append(String(compute(subMathEquation: subEquation, hasPrecedence: hasPrecedence)))

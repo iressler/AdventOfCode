@@ -68,7 +68,7 @@ struct Challenge2020Day10Solver: ChallengeSolver {
   static private func getAnswer1(given joltages: [Int]) -> String {
     var sorted = joltages.sorted()
     // The outlet provides 0 joltages.
-    sorted.insert(0, at: 0)
+    sorted.prepend(0)
     // Start with a gap at index 3 because the laptop is assumed to take 3 more than the highest joltage.
     // Have an extra leading 0 to make the (already complex) math simpler.
     var gaps = [0, 0, 0, 1]
@@ -110,7 +110,7 @@ struct Challenge2020Day10Solver: ChallengeSolver {
   static private func getAnswer2(given joltages: [Int]) -> String {
     var sorted = joltages.sorted()
     // The outlet provides 0 joltages.
-    sorted.insert(0, at: 0)
+    sorted.prepend(0)
 
     return "\(numberOfPossibleChains(startingAt: 0, in: sorted))"
   }
