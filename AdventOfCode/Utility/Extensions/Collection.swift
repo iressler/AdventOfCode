@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Math
 extension Collection where Element: AdditiveArithmetic {
   func sum() -> Element {
     self.reduce(into: .zero, { $0 += $1 })
@@ -19,6 +20,7 @@ extension Collection where Element: Numeric {
   }
 }
 
+// MARK: - Optional Math
 extension Collection {
   func min<E: Comparable>() -> E? where Element == Optional<E> {
     return compactMap().min()
@@ -33,9 +35,33 @@ extension Collection {
   }
 }
 
+
+// MARK: - Adjacency
+extension Collection {
+  func indicesAdjacent(to index: Int, includeIndex: Bool = false) -> [Int?] {
+    var indices = [Int?](repeating: nil, count: 3)
+
+    if index > 0 {
+      indices[0] = index - 1
+    }
+
+    if index < (count - 1) {
+      indices[2] = index + 1
+    }
+
+    if includeIndex {
+      indices[1] = index
+    } // else leave it nil.
+
+    return indices
+  }
+
+  func indicesAdjacent(to index: Int, includeIndex: Bool = false) -> [Int] {
+    return indicesAdjacent(to: index, includeIndex: includeIndex).compactMap()
   }
 }
 
+// MARK: - subscripts
 extension Collection {
   subscript(unsafe indexOffset: Int) -> Element {
     return self[index(startIndex, offsetBy: indexOffset)]

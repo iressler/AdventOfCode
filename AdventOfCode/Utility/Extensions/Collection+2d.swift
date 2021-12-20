@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension Collection where Index == Int,
-                           Element: Collection, Element.Index == Index {
+// MARK: - Field Description.
+extension Collection where Element: Collection {
   private func components(rotated: Bool) -> [[String]] {
     guard !isEmpty else {
       return []
@@ -21,7 +21,7 @@ extension Collection where Index == Int,
     var components = [[String]](repeating: [], count: first!.count)
     for i in 0..<first!.count {
       for value in self {
-        components[i].append(description(for: value[i]))
+        components[i].append(description(for: value[unsafe: i]))
       }
     }
     return components
@@ -68,74 +68,94 @@ extension Collection where Index == Int,
     }
     return components.map({ $0.joined(separator: separator) }).joined(separator: "\n")
   }
+}
 
+// MARK: - Point adjacency
+extension Collection where Element: Collection {
+  // Because a collection of non-collection values only has 1 dimension need to convert into a two dimensional point.
+  private func pointsAdjacent(to point: Point, atX x: Int, includeDiagonals: Bool, includeCenterPoint: Bool) -> [Point?] {
+    // If the x does not match the point, anything adjacent to x is diagonal.
+    let xMatchesPoint = (point.x == x)
+
+    // If x matches the point need to use includeCenterPoint to determine whether to include the center point.
+    let includeIndex: Bool = xMatchesPoint ? includeCenterPoint : true
+
+    let adjacentPoints: [Point?]
+
+    // If x does not match the point and diagonals are not included then only need to check the Point (x, point.y).
+    if !xMatchesPoint && !includeDiagonals {
+      // The points are always diagonal to the point here, so do not need to check includeCenterPoint.
+      var newPoint: Point? = point
+      if self[unsafe: x].count > point.y {
+        newPoint!.x = x
+      } else {
+        newPoint = nil
+      }
+      // Surround with nil to indicate not including the points beside x.
+      adjacentPoints = [nil, newPoint, nil]
+    // Else including points beside x (whether diagonal or adjacent to the point).
+    } else {
+      adjacentPoints = self[unsafe: x].indicesAdjacent(to: point.y, includeIndex: includeIndex).map { (y: Int?) -> Point? in
+        guard let y = y else {
+          return nil
+        }
+
+        var newPoint = point
+        newPoint.x = x
+        newPoint.y = y
+        return newPoint
+      }
+    }
+    return adjacentPoints
+  }
+
+  func pointsAdjacent(to point: Point, includeDiagonals: Bool = false, includePoint: Bool = false) -> [Point?] {
+    var adjacentPoints = [Point?]()
+
+    // Always pass true for includeCenterPoint in x(+/-)1 because that will be a point adjacent to the provided point.
+    if point.x > 0 {
+      adjacentPoints.append(contentsOf: pointsAdjacent(to: point,
+                                                       atX: point.x-1,
+                                                       includeDiagonals: includeDiagonals,
+                                                       includeCenterPoint: true))
+    } else {
+      adjacentPoints.append(contentsOf: [Point?](repeating: nil, count: 3))
+    }
+
+    adjacentPoints.append(contentsOf: pointsAdjacent(to: point,
+                                                     atX: point.x,
+                                                     includeDiagonals: includeDiagonals,
+                                                     includeCenterPoint: includePoint))
+    if !includePoint {
+      adjacentPoints.remove(at: adjacentPoints.count-2)
+    }
+
+    if (point.x+1) < count {
+      adjacentPoints.append(contentsOf: pointsAdjacent(to: point,
+                                                       atX: point.x+1,
+                                                       includeDiagonals: includeDiagonals,
+                                                       includeCenterPoint: true))
+    } else {
+      adjacentPoints.append(contentsOf: [Point?](repeating: nil, count: 3))
+    }
+
+    return adjacentPoints
+  }
+
+  func pointsAdjacent(to point: Point, includeDiagonals: Bool = false, includePoint: Bool = false) -> [Point] {
+    return pointsAdjacent(to: point, includeDiagonals: includeDiagonals).compactMap()
+  }
+}
+
+// MARK: -
+extension Collection where Element: Collection {
   // Supports non mutable collections, e.g. let bindings?
   subscript(point: Point) -> Element.Element {
-    return self[point.x][point.y]
+    return self[unsafe: point.x][unsafe: point.y]
   }
 
   func contains(point: Point) -> Bool {
     return point.x >= 0 && point.y >= 0 &&
-    point.x < count && point.y < self[point.x].count
-  }
-}
-
-extension MutableCollection where Index == Int,
-                                  Element: MutableCollection, Element.Index == Index {
-  subscript(point: Point) -> Element.Element {
-    get {
-      return self[point.x][point.y]
-    }
-    set {
-      self[point.x][point.y] = newValue
-    }
-  }
-
-  func pointsAdjacent(to point: Point, includeDiagonals: Bool = false) -> [Point] {
-    var adjacentPoints = [Point]()
-    let xCanGoDown = point.x > 0
-    let xCanGoUp = point.x < (count-1)
-    let yCanGoDown = point.y > 0
-    let yCanGoUp = point.y < (self[point.x].count-1)
-
-    if yCanGoUp {
-      let upY = point.y + 1
-      adjacentPoints.append(Point(x: point.x, y: upY, z: point.z, w: point.w))
-
-      // Check the 2 diagonals to the right if including diagonals.
-      if includeDiagonals {
-        if xCanGoDown {
-          adjacentPoints.append(Point(x: point.x-1, y: upY, z: point.z, w: point.w))
-        }
-        if xCanGoUp {
-          adjacentPoints.append(Point(x: point.x+1, y: upY, z: point.z, w: point.w))
-        }
-      }
-    }
-
-    if yCanGoDown {
-      let downY = point.y - 1
-      adjacentPoints.append(Point(x: point.x, y: downY, z: point.z, w: point.w))
-
-      // Check the 2 diagonals to the left if including diagonals.
-      if includeDiagonals {
-        if xCanGoDown {
-          adjacentPoints.append(Point(x: point.x-1, y: downY, z: point.z, w: point.w))
-        }
-        if xCanGoUp {
-          adjacentPoints.append(Point(x: point.x+1, y: downY, z: point.z, w: point.w))
-        }
-      }
-    }
-
-    if xCanGoUp {
-      adjacentPoints.append(Point(x: point.x+1, y: point.y, z: point.z, w: point.w))
-    }
-
-    if xCanGoDown {
-      adjacentPoints.append(Point(x: point.x-1, y: point.y, z: point.z, w: point.w))
-    }
-
-    return adjacentPoints
+    point.x < count && point.y < self[unsafe: point.x].count
   }
 }

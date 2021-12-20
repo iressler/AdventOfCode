@@ -49,7 +49,7 @@ struct Challenge2021Day15Solver: ChallengeSolver {
     }
 
     while nextPoint != Point(x: 0, y: 0) {
-      let adjacentPoints = riskLevels.pointsAdjacent(to: nextPoint)
+      let adjacentPoints: [Point] = riskLevels.pointsAdjacent(to: nextPoint)
       let sorted = adjacentPoints.sorted { lhs, rhs in
         riskCosts[lhs] < riskCosts[rhs]
       }
@@ -74,7 +74,8 @@ struct Challenge2021Day15Solver: ChallengeSolver {
 
     while !pointsToCheck.isEmpty {
       let nextPoint = pointsToCheck.removeFirst()
-      for adjacentPoint in riskLevels.pointsAdjacent(to: nextPoint) {
+      let t: [Point] = riskLevels.pointsAdjacent(to: nextPoint)
+      for adjacentPoint in t {
         var risk = riskLevels[adjacentPoint] + risks[nextPoint]!
         if let existingRisk = risks[adjacentPoint] {
           // If the risk is now lower recheck it.

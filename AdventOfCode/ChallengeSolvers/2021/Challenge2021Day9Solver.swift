@@ -60,7 +60,7 @@ struct Challenge2021Day9Solver: ChallengeSolver {
 
     var newBasin = Basin(points: [point])
 
-    var adjacentPoints = depths.pointsAdjacent(to: point)
+    var adjacentPoints: [Point] = depths.pointsAdjacent(to: point)
 
     while let adjacentPoint = adjacentPoints.popLast() {
       // Should this use a dictionary for faster lookup?
