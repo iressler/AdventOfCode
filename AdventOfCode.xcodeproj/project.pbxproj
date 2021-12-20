@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D10D1652770E4CA000812D2 /* RangeReplaceableCollection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D1642770E4CA000812D2 /* RangeReplaceableCollection+2d.swift */; };
+		8D10D1672770E4D5000812D2 /* RangeReplaceableCollection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D1662770E4D5000812D2 /* RangeReplaceableCollection+3d.swift */; };
+		8D10D1692770E4DD000812D2 /* RangeReplaceableCollection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D1682770E4DD000812D2 /* RangeReplaceableCollection+4d.swift */; };
+		8D10D16A2770F260000812D2 /* RangeReplaceableCollection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D1642770E4CA000812D2 /* RangeReplaceableCollection+2d.swift */; };
+		8D10D16B2770F263000812D2 /* RangeReplaceableCollection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D1662770E4D5000812D2 /* RangeReplaceableCollection+3d.swift */; };
+		8D10D16C2770F265000812D2 /* RangeReplaceableCollection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D1682770E4DD000812D2 /* RangeReplaceableCollection+4d.swift */; };
 		8D10D16E2770F2CB000812D2 /* MutableCollection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D16D2770F2CB000812D2 /* MutableCollection+2d.swift */; };
 		8D10D1702770F2D2000812D2 /* MutableCollection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D16F2770F2D2000812D2 /* MutableCollection+3d.swift */; };
 		8D10D1722770F2D9000812D2 /* MutableCollection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D1712770F2D9000812D2 /* MutableCollection+4d.swift */; };
@@ -173,6 +179,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D10D1642770E4CA000812D2 /* RangeReplaceableCollection+2d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+2d.swift"; sourceTree = "<group>"; };
+		8D10D1662770E4D5000812D2 /* RangeReplaceableCollection+3d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+3d.swift"; sourceTree = "<group>"; };
+		8D10D1682770E4DD000812D2 /* RangeReplaceableCollection+4d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+4d.swift"; sourceTree = "<group>"; };
 		8D10D16D2770F2CB000812D2 /* MutableCollection+2d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MutableCollection+2d.swift"; sourceTree = "<group>"; };
 		8D10D16F2770F2D2000812D2 /* MutableCollection+3d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MutableCollection+3d.swift"; sourceTree = "<group>"; };
 		8D10D1712770F2D9000812D2 /* MutableCollection+4d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MutableCollection+4d.swift"; sourceTree = "<group>"; };
@@ -439,6 +448,9 @@
 				8D10D16F2770F2D2000812D2 /* MutableCollection+3d.swift */,
 				8D10D1712770F2D9000812D2 /* MutableCollection+4d.swift */,
 				8DF48EF22760120100D46B61 /* RangeReplaceableCollection.swift */,
+				8D10D1642770E4CA000812D2 /* RangeReplaceableCollection+2d.swift */,
+				8D10D1662770E4D5000812D2 /* RangeReplaceableCollection+3d.swift */,
+				8D10D1682770E4DD000812D2 /* RangeReplaceableCollection+4d.swift */,
 				8DF48EF42760120F00D46B61 /* Set.swift */,
 				8DF48E672759492D00D46B61 /* String.swift */,
 				8DCAB951276BA66500CB1BCD /* String+Binary.swift */,
@@ -579,7 +591,9 @@
 				8DA4E1EB2769545A0075E1FA /* Challenge2021Day15Solver.swift in Sources */,
 				8DA4E1B7276954380075E1FA /* ChallengeNumber.swift in Sources */,
 				8DA4E1BE276954530075E1FA /* Challenge2020Day3Solver.swift in Sources */,
+				8D10D16A2770F260000812D2 /* RangeReplaceableCollection+2d.swift in Sources */,
 				8DA4E1D52769545A0075E1FA /* Challenge2021Day18Solver.swift in Sources */,
+				8D10D16C2770F265000812D2 /* RangeReplaceableCollection+4d.swift in Sources */,
 				8DA4E1CF276954530075E1FA /* Challenge2020Day12Solver.swift in Sources */,
 				8DA4E1C7276954530075E1FA /* Challenge2020Day21Solver.swift in Sources */,
 				8DA4E1BA276954430075E1FA /* Challenge2020Day1Solver.swift in Sources */,
@@ -640,6 +654,7 @@
 				8DCAB953276BABC900CB1BCD /* String+Binary.swift in Sources */,
 				8DA4E1E32769545A0075E1FA /* Challenge2021Day6Solver.swift in Sources */,
 				8DA4E1F1276954750075E1FA /* RangeReplaceableCollection.swift in Sources */,
+				8D10D16B2770F263000812D2 /* RangeReplaceableCollection+3d.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +696,7 @@
 				8DF48EE6275F1F6C00D46B61 /* Challenge2020Day10Solver.swift in Sources */,
 				8DF48EBD275F1EE500D46B61 /* Challenge2021Day18Solver.swift in Sources */,
 				8DF48E6D27594DDC00D46B61 /* ChallengeSolver.swift in Sources */,
+				8D10D1672770E4D5000812D2 /* RangeReplaceableCollection+3d.swift in Sources */,
 				8DF48EA2275F1ED800D46B61 /* Challenge2021Day8Solver.swift in Sources */,
 				8DF48EC1275F1EE500D46B61 /* Challenge2021Day10Solver.swift in Sources */,
 				8DF48EF32760120100D46B61 /* RangeReplaceableCollection.swift in Sources */,
@@ -707,6 +723,7 @@
 				8DF48EBC275F1EE500D46B61 /* Challenge2021Day20Solver.swift in Sources */,
 				8DF48E8F275AB97900D46B61 /* Challenge.swift in Sources */,
 				8DF48EE4275F1F6C00D46B61 /* Challenge2020Day6Solver.swift in Sources */,
+				8D10D1652770E4CA000812D2 /* RangeReplaceableCollection+2d.swift in Sources */,
 				8DCAB952276BA66500CB1BCD /* String+Binary.swift in Sources */,
 				8DF48EE0275F1F6C00D46B61 /* Challenge2020Day19Solver.swift in Sources */,
 				8D10D1702770F2D2000812D2 /* MutableCollection+3d.swift in Sources */,
@@ -714,6 +731,7 @@
 				8DF48EA0275F1DFB00D46B61 /* Challenge2020Day4Solver.swift in Sources */,
 				8DF48EDA275F1F6C00D46B61 /* Challenge2020Day9Solver.swift in Sources */,
 				8DF48EF72760121D00D46B61 /* Dictionary.swift in Sources */,
+				8D10D1692770E4DD000812D2 /* RangeReplaceableCollection+4d.swift in Sources */,
 				8DF48EE3275F1F6C00D46B61 /* Challenge2020Day5Solver.swift in Sources */,
 				8DF48EC3275F1EE500D46B61 /* Challenge2021Day21Solver.swift in Sources */,
 				8DF48EEA275F1F6C00D46B61 /* Challenge2020Day12Solver.swift in Sources */,
