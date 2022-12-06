@@ -1,19 +1,14 @@
 //
-//  Challenge2021Day23Solver.swift
+//  Challenge2022Day3Solver.swift
 //  AdventOfCode
 //
-//  Created by Isaac Ressler on 12/6/21.
+//  Created by Isaac Ressler on 12/2/21.
 //
 
 import Foundation
 
-struct Challenge2021Day23Solver: ChallengeSolver {
+struct Challenge2022Day3Solver: ChallengeSolver {
   static let defaultValue = """
-#############
-#...........#
-###B#C#B#D###
-  #A#D#C#A#
-  #########
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {

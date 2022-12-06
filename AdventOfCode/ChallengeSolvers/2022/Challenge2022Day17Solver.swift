@@ -1,5 +1,5 @@
 //
-//  Challenge2021Day23Solver.swift
+//  Challenge2022Day17Solver.swift
 //  AdventOfCode
 //
 //  Created by Isaac Ressler on 12/6/21.
@@ -7,13 +7,8 @@
 
 import Foundation
 
-struct Challenge2021Day23Solver: ChallengeSolver {
+struct Challenge2022Day17Solver: ChallengeSolver {
   static let defaultValue = """
-#############
-#...........#
-###B#C#B#D###
-  #A#D#C#A#
-  #########
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
@@ -32,5 +27,4 @@ struct Challenge2021Day23Solver: ChallengeSolver {
 
   static private func getAnswer2(given: [String]) -> String {
     return ""
-  }
-}
+  }}

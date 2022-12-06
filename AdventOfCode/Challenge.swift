@@ -72,6 +72,33 @@ struct Challenge {
       Challenge2021Day23Solver.self,
       Challenge2021Day24Solver.self,
       Challenge2021Day25Solver.self
+    ],
+    .twentyTwentyTwo: [
+      Challenge2022Day1Solver.self,
+      Challenge2022Day2Solver.self,
+      Challenge2022Day3Solver.self,
+      Challenge2022Day4Solver.self,
+      Challenge2022Day5Solver.self,
+      Challenge2022Day6Solver.self,
+      Challenge2022Day7Solver.self,
+      Challenge2022Day8Solver.self,
+      Challenge2022Day9Solver.self,
+      Challenge2022Day10Solver.self,
+      Challenge2022Day11Solver.self,
+      Challenge2022Day12Solver.self,
+      Challenge2022Day13Solver.self,
+      Challenge2022Day14Solver.self,
+      Challenge2022Day15Solver.self,
+      Challenge2022Day16Solver.self,
+      Challenge2022Day17Solver.self,
+      Challenge2022Day18Solver.self,
+      Challenge2022Day19Solver.self,
+      Challenge2022Day20Solver.self,
+      Challenge2022Day21Solver.self,
+      Challenge2022Day22Solver.self,
+      Challenge2022Day23Solver.self,
+      Challenge2022Day24Solver.self,
+      Challenge2022Day25Solver.self
     ]
   ]
 

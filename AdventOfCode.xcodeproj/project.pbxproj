@@ -20,6 +20,7 @@
 		8D10D17727710F7F000812D2 /* MutableCollection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D16D2770F2CB000812D2 /* MutableCollection+2d.swift */; };
 		8D10D17827710F7F000812D2 /* MutableCollection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D16F2770F2D2000812D2 /* MutableCollection+3d.swift */; };
 		8D10D17927710F7F000812D2 /* MutableCollection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D1712770F2D9000812D2 /* MutableCollection+4d.swift */; };
+		8D10D17B27719334000812D2 /* OtherSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D17A27719334000812D2 /* OtherSolution.swift */; };
 		8D6C2416276A86EA00F6165F /* Collection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E203276A7E030075E1FA /* Collection+3d.swift */; };
 		8D6C2417276A86ED00F6165F /* Collection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */; };
 		8D6C2419276A9A9900F6165F /* Collection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2418276A9A9900F6165F /* Collection+4d.swift */; };
@@ -94,6 +95,59 @@
 		8DA4E20027696E400075E1FA /* Solutions2021.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1FD27696E400075E1FA /* Solutions2021.swift */; };
 		8DA4E202276A7DDF0075E1FA /* Collection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */; };
 		8DA4E204276A7E030075E1FA /* Collection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E203276A7E030075E1FA /* Collection+3d.swift */; };
+		8DA9F846293EF18800661921 /* Challenge2022Day4Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82C293EF18700661921 /* Challenge2022Day4Solver.swift */; };
+		8DA9F847293EF18800661921 /* Challenge2022Day21Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82D293EF18700661921 /* Challenge2022Day21Solver.swift */; };
+		8DA9F848293EF18800661921 /* Challenge2022Day22Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82E293EF18700661921 /* Challenge2022Day22Solver.swift */; };
+		8DA9F849293EF18800661921 /* Challenge2022Day17Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82F293EF18700661921 /* Challenge2022Day17Solver.swift */; };
+		8DA9F84A293EF18800661921 /* Challenge2022Day1Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F830293EF18700661921 /* Challenge2022Day1Solver.swift */; };
+		8DA9F84B293EF18800661921 /* Challenge2022Day13Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F831293EF18700661921 /* Challenge2022Day13Solver.swift */; };
+		8DA9F84C293EF18800661921 /* Challenge2022Day10Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F832293EF18700661921 /* Challenge2022Day10Solver.swift */; };
+		8DA9F84D293EF18800661921 /* Challenge2022Day20Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F833293EF18700661921 /* Challenge2022Day20Solver.swift */; };
+		8DA9F84E293EF18800661921 /* Challenge2022Day8Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F834293EF18700661921 /* Challenge2022Day8Solver.swift */; };
+		8DA9F84F293EF18800661921 /* Challenge2022Day19Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F835293EF18700661921 /* Challenge2022Day19Solver.swift */; };
+		8DA9F850293EF18800661921 /* Challenge2022Day16Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F836293EF18700661921 /* Challenge2022Day16Solver.swift */; };
+		8DA9F851293EF18800661921 /* Challenge2022Day15Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F837293EF18800661921 /* Challenge2022Day15Solver.swift */; };
+		8DA9F852293EF18800661921 /* Challenge2022Day3Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F838293EF18800661921 /* Challenge2022Day3Solver.swift */; };
+		8DA9F853293EF18800661921 /* Challenge2022Day2Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F839293EF18800661921 /* Challenge2022Day2Solver.swift */; };
+		8DA9F854293EF18800661921 /* Challenge2022Day6Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83A293EF18800661921 /* Challenge2022Day6Solver.swift */; };
+		8DA9F855293EF18800661921 /* Challenge2022Day12Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83B293EF18800661921 /* Challenge2022Day12Solver.swift */; };
+		8DA9F856293EF18800661921 /* Challenge2022Day23Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83C293EF18800661921 /* Challenge2022Day23Solver.swift */; };
+		8DA9F857293EF18800661921 /* Challenge2022Day18Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83D293EF18800661921 /* Challenge2022Day18Solver.swift */; };
+		8DA9F858293EF18800661921 /* Challenge2022Day14Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83E293EF18800661921 /* Challenge2022Day14Solver.swift */; };
+		8DA9F859293EF18800661921 /* Challenge2022Day9Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83F293EF18800661921 /* Challenge2022Day9Solver.swift */; };
+		8DA9F85A293EF18800661921 /* Challenge2022Day25Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F840293EF18800661921 /* Challenge2022Day25Solver.swift */; };
+		8DA9F85B293EF18800661921 /* Challenge2022Day24Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F841293EF18800661921 /* Challenge2022Day24Solver.swift */; };
+		8DA9F85C293EF18800661921 /* Challenge2022Day11Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F842293EF18800661921 /* Challenge2022Day11Solver.swift */; };
+		8DA9F85D293EF18800661921 /* Challenge2022Day5Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F843293EF18800661921 /* Challenge2022Day5Solver.swift */; };
+		8DA9F85E293EF18800661921 /* Challenge2022Day7Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F844293EF18800661921 /* Challenge2022Day7Solver.swift */; };
+		8DA9F863293EF45400661921 /* AdventOfCodeTests2022.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F860293EF45400661921 /* AdventOfCodeTests2022.swift */; };
+		8DA9F864293EF45400661921 /* Solutions2022.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F861293EF45400661921 /* Solutions2022.swift */; };
+		8DA9F865293EF45400661921 /* Inputs2022.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F862293EF45400661921 /* Inputs2022.swift */; };
+		8DA9F866293EF55F00661921 /* Challenge2022Day16Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F836293EF18700661921 /* Challenge2022Day16Solver.swift */; };
+		8DA9F867293EF55F00661921 /* Challenge2022Day22Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82E293EF18700661921 /* Challenge2022Day22Solver.swift */; };
+		8DA9F868293EF55F00661921 /* Challenge2022Day20Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F833293EF18700661921 /* Challenge2022Day20Solver.swift */; };
+		8DA9F869293EF55F00661921 /* Challenge2022Day8Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F834293EF18700661921 /* Challenge2022Day8Solver.swift */; };
+		8DA9F86A293EF55F00661921 /* Challenge2022Day15Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F837293EF18800661921 /* Challenge2022Day15Solver.swift */; };
+		8DA9F86B293EF55F00661921 /* Challenge2022Day6Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83A293EF18800661921 /* Challenge2022Day6Solver.swift */; };
+		8DA9F86C293EF55F00661921 /* Challenge2022Day3Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F838293EF18800661921 /* Challenge2022Day3Solver.swift */; };
+		8DA9F86D293EF55F00661921 /* Challenge2022Day19Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F835293EF18700661921 /* Challenge2022Day19Solver.swift */; };
+		8DA9F86E293EF55F00661921 /* Challenge2022Day7Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F844293EF18800661921 /* Challenge2022Day7Solver.swift */; };
+		8DA9F86F293EF55F00661921 /* Challenge2022Day24Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F841293EF18800661921 /* Challenge2022Day24Solver.swift */; };
+		8DA9F870293EF55F00661921 /* Challenge2022Day1Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F830293EF18700661921 /* Challenge2022Day1Solver.swift */; };
+		8DA9F871293EF55F00661921 /* Challenge2022Day9Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83F293EF18800661921 /* Challenge2022Day9Solver.swift */; };
+		8DA9F872293EF55F00661921 /* Challenge2022Day21Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82D293EF18700661921 /* Challenge2022Day21Solver.swift */; };
+		8DA9F873293EF55F00661921 /* Challenge2022Day5Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F843293EF18800661921 /* Challenge2022Day5Solver.swift */; };
+		8DA9F874293EF55F00661921 /* Challenge2022Day11Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F842293EF18800661921 /* Challenge2022Day11Solver.swift */; };
+		8DA9F875293EF55F00661921 /* Challenge2022Day12Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83B293EF18800661921 /* Challenge2022Day12Solver.swift */; };
+		8DA9F876293EF55F00661921 /* Challenge2022Day13Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F831293EF18700661921 /* Challenge2022Day13Solver.swift */; };
+		8DA9F877293EF55F00661921 /* Challenge2022Day14Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83E293EF18800661921 /* Challenge2022Day14Solver.swift */; };
+		8DA9F878293EF55F00661921 /* Challenge2022Day2Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F839293EF18800661921 /* Challenge2022Day2Solver.swift */; };
+		8DA9F879293EF55F00661921 /* Challenge2022Day23Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83C293EF18800661921 /* Challenge2022Day23Solver.swift */; };
+		8DA9F87A293EF55F00661921 /* Challenge2022Day18Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F83D293EF18800661921 /* Challenge2022Day18Solver.swift */; };
+		8DA9F87B293EF55F00661921 /* Challenge2022Day25Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F840293EF18800661921 /* Challenge2022Day25Solver.swift */; };
+		8DA9F87C293EF55F00661921 /* Challenge2022Day17Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82F293EF18700661921 /* Challenge2022Day17Solver.swift */; };
+		8DA9F87D293EF55F00661921 /* Challenge2022Day10Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F832293EF18700661921 /* Challenge2022Day10Solver.swift */; };
+		8DA9F87E293EF55F00661921 /* Challenge2022Day4Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82C293EF18700661921 /* Challenge2022Day4Solver.swift */; };
 		8DCAB952276BA66500CB1BCD /* String+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB951276BA66500CB1BCD /* String+Binary.swift */; };
 		8DCAB953276BABC900CB1BCD /* String+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB951276BA66500CB1BCD /* String+Binary.swift */; };
 		8DCAB954276BABE600CB1BCD /* Collection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2418276A9A9900F6165F /* Collection+4d.swift */; };
@@ -185,6 +239,7 @@
 		8D10D16D2770F2CB000812D2 /* MutableCollection+2d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MutableCollection+2d.swift"; sourceTree = "<group>"; };
 		8D10D16F2770F2D2000812D2 /* MutableCollection+3d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MutableCollection+3d.swift"; sourceTree = "<group>"; };
 		8D10D1712770F2D9000812D2 /* MutableCollection+4d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MutableCollection+4d.swift"; sourceTree = "<group>"; };
+		8D10D17A27719334000812D2 /* OtherSolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSolution.swift; sourceTree = "<group>"; };
 		8D6C2418276A9A9900F6165F /* Collection+4d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+4d.swift"; sourceTree = "<group>"; };
 		8DA4E1AB27694CEB0075E1FA /* AdventOfCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventOfCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA4E1AD27694CEB0075E1FA /* AdventOfCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventOfCodeTests.swift; sourceTree = "<group>"; };
@@ -196,6 +251,34 @@
 		8DA4E1FD27696E400075E1FA /* Solutions2021.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solutions2021.swift; sourceTree = "<group>"; };
 		8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+2d.swift"; sourceTree = "<group>"; };
 		8DA4E203276A7E030075E1FA /* Collection+3d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+3d.swift"; sourceTree = "<group>"; };
+		8DA9F82C293EF18700661921 /* Challenge2022Day4Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day4Solver.swift; sourceTree = "<group>"; };
+		8DA9F82D293EF18700661921 /* Challenge2022Day21Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day21Solver.swift; sourceTree = "<group>"; };
+		8DA9F82E293EF18700661921 /* Challenge2022Day22Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day22Solver.swift; sourceTree = "<group>"; };
+		8DA9F82F293EF18700661921 /* Challenge2022Day17Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day17Solver.swift; sourceTree = "<group>"; };
+		8DA9F830293EF18700661921 /* Challenge2022Day1Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day1Solver.swift; sourceTree = "<group>"; };
+		8DA9F831293EF18700661921 /* Challenge2022Day13Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day13Solver.swift; sourceTree = "<group>"; };
+		8DA9F832293EF18700661921 /* Challenge2022Day10Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day10Solver.swift; sourceTree = "<group>"; };
+		8DA9F833293EF18700661921 /* Challenge2022Day20Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day20Solver.swift; sourceTree = "<group>"; };
+		8DA9F834293EF18700661921 /* Challenge2022Day8Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day8Solver.swift; sourceTree = "<group>"; };
+		8DA9F835293EF18700661921 /* Challenge2022Day19Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day19Solver.swift; sourceTree = "<group>"; };
+		8DA9F836293EF18700661921 /* Challenge2022Day16Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day16Solver.swift; sourceTree = "<group>"; };
+		8DA9F837293EF18800661921 /* Challenge2022Day15Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day15Solver.swift; sourceTree = "<group>"; };
+		8DA9F838293EF18800661921 /* Challenge2022Day3Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day3Solver.swift; sourceTree = "<group>"; };
+		8DA9F839293EF18800661921 /* Challenge2022Day2Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day2Solver.swift; sourceTree = "<group>"; };
+		8DA9F83A293EF18800661921 /* Challenge2022Day6Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day6Solver.swift; sourceTree = "<group>"; };
+		8DA9F83B293EF18800661921 /* Challenge2022Day12Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day12Solver.swift; sourceTree = "<group>"; };
+		8DA9F83C293EF18800661921 /* Challenge2022Day23Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day23Solver.swift; sourceTree = "<group>"; };
+		8DA9F83D293EF18800661921 /* Challenge2022Day18Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day18Solver.swift; sourceTree = "<group>"; };
+		8DA9F83E293EF18800661921 /* Challenge2022Day14Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day14Solver.swift; sourceTree = "<group>"; };
+		8DA9F83F293EF18800661921 /* Challenge2022Day9Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day9Solver.swift; sourceTree = "<group>"; };
+		8DA9F840293EF18800661921 /* Challenge2022Day25Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day25Solver.swift; sourceTree = "<group>"; };
+		8DA9F841293EF18800661921 /* Challenge2022Day24Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day24Solver.swift; sourceTree = "<group>"; };
+		8DA9F842293EF18800661921 /* Challenge2022Day11Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day11Solver.swift; sourceTree = "<group>"; };
+		8DA9F843293EF18800661921 /* Challenge2022Day5Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day5Solver.swift; sourceTree = "<group>"; };
+		8DA9F844293EF18800661921 /* Challenge2022Day7Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge2022Day7Solver.swift; sourceTree = "<group>"; };
+		8DA9F860293EF45400661921 /* AdventOfCodeTests2022.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventOfCodeTests2022.swift; sourceTree = "<group>"; };
+		8DA9F861293EF45400661921 /* Solutions2022.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solutions2022.swift; sourceTree = "<group>"; };
+		8DA9F862293EF45400661921 /* Inputs2022.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inputs2022.swift; sourceTree = "<group>"; };
 		8DCAB951276BA66500CB1BCD /* String+Binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Binary.swift"; sourceTree = "<group>"; };
 		8DCAB955276BF50C00CB1BCD /* MutableCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollection.swift; sourceTree = "<group>"; };
 		8DCAB958276D23E700CB1BCD /* popFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popFirst.swift; sourceTree = "<group>"; };
@@ -292,6 +375,7 @@
 				8DA4E1AD27694CEB0075E1FA /* AdventOfCodeTests.swift */,
 				8DA4E1F727696DB10075E1FA /* 2020 */,
 				8DA4E1FA27696DE60075E1FA /* 2021 */,
+				8DA9F85F293EF42D00661921 /* 2022 */,
 			);
 			path = AdventOfCodeTests;
 			sourceTree = "<group>";
@@ -314,6 +398,48 @@
 				8DA4E1FD27696E400075E1FA /* Solutions2021.swift */,
 			);
 			path = 2021;
+			sourceTree = "<group>";
+		};
+		8DA9F82A293EF08B00661921 /* 2022 */ = {
+			isa = PBXGroup;
+			children = (
+				8DA9F830293EF18700661921 /* Challenge2022Day1Solver.swift */,
+				8DA9F839293EF18800661921 /* Challenge2022Day2Solver.swift */,
+				8DA9F838293EF18800661921 /* Challenge2022Day3Solver.swift */,
+				8DA9F82C293EF18700661921 /* Challenge2022Day4Solver.swift */,
+				8DA9F843293EF18800661921 /* Challenge2022Day5Solver.swift */,
+				8DA9F83A293EF18800661921 /* Challenge2022Day6Solver.swift */,
+				8DA9F844293EF18800661921 /* Challenge2022Day7Solver.swift */,
+				8DA9F834293EF18700661921 /* Challenge2022Day8Solver.swift */,
+				8DA9F83F293EF18800661921 /* Challenge2022Day9Solver.swift */,
+				8DA9F832293EF18700661921 /* Challenge2022Day10Solver.swift */,
+				8DA9F842293EF18800661921 /* Challenge2022Day11Solver.swift */,
+				8DA9F83B293EF18800661921 /* Challenge2022Day12Solver.swift */,
+				8DA9F831293EF18700661921 /* Challenge2022Day13Solver.swift */,
+				8DA9F83E293EF18800661921 /* Challenge2022Day14Solver.swift */,
+				8DA9F837293EF18800661921 /* Challenge2022Day15Solver.swift */,
+				8DA9F836293EF18700661921 /* Challenge2022Day16Solver.swift */,
+				8DA9F82F293EF18700661921 /* Challenge2022Day17Solver.swift */,
+				8DA9F83D293EF18800661921 /* Challenge2022Day18Solver.swift */,
+				8DA9F835293EF18700661921 /* Challenge2022Day19Solver.swift */,
+				8DA9F833293EF18700661921 /* Challenge2022Day20Solver.swift */,
+				8DA9F82D293EF18700661921 /* Challenge2022Day21Solver.swift */,
+				8DA9F82E293EF18700661921 /* Challenge2022Day22Solver.swift */,
+				8DA9F83C293EF18800661921 /* Challenge2022Day23Solver.swift */,
+				8DA9F841293EF18800661921 /* Challenge2022Day24Solver.swift */,
+				8DA9F840293EF18800661921 /* Challenge2022Day25Solver.swift */,
+			);
+			path = 2022;
+			sourceTree = "<group>";
+		};
+		8DA9F85F293EF42D00661921 /* 2022 */ = {
+			isa = PBXGroup;
+			children = (
+				8DA9F860293EF45400661921 /* AdventOfCodeTests2022.swift */,
+				8DA9F862293EF45400661921 /* Inputs2022.swift */,
+				8DA9F861293EF45400661921 /* Solutions2022.swift */,
+			);
+			path = 2022;
 			sourceTree = "<group>";
 		};
 		8DF48E4E275930BC00D46B61 = {
@@ -356,6 +482,7 @@
 				8DF48E6C27594DDC00D46B61 /* ChallengeSolver.swift */,
 				8DF48E90275ABD5300D46B61 /* 2020 */,
 				8DF48E8B275AB88400D46B61 /* 2021 */,
+				8DA9F82A293EF08B00661921 /* 2022 */,
 			);
 			path = ChallengeSolvers;
 			sourceTree = "<group>";
@@ -388,6 +515,7 @@
 				8DF48EA3275F1EE400D46B61 /* Challenge2021Day23Solver.swift */,
 				8DF48EA5275F1EE400D46B61 /* Challenge2021Day24Solver.swift */,
 				8DF48EAF275F1EE400D46B61 /* Challenge2021Day25Solver.swift */,
+				8D10D17A27719334000812D2 /* OtherSolution.swift */,
 			);
 			path = 2021;
 			sourceTree = "<group>";
@@ -507,7 +635,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					8DA4E1AA27694CEB0075E1FA = {
 						CreatedOnToolsVersion = 13.1;
@@ -552,6 +680,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		8DF48E72275967FD00D46B61 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -575,30 +704,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA4E1E52769545A0075E1FA /* Challenge2021Day9Solver.swift in Sources */,
+				8DA9F86D293EF55F00661921 /* Challenge2022Day19Solver.swift in Sources */,
+				8DA9F875293EF55F00661921 /* Challenge2022Day12Solver.swift in Sources */,
 				8DA4E1D1276954530075E1FA /* Challenge2020Day8Solver.swift in Sources */,
+				8DA9F86C293EF55F00661921 /* Challenge2022Day3Solver.swift in Sources */,
+				8DA9F87A293EF55F00661921 /* Challenge2022Day18Solver.swift in Sources */,
+				8DA9F874293EF55F00661921 /* Challenge2022Day11Solver.swift in Sources */,
 				8DA4E20027696E400075E1FA /* Solutions2021.swift in Sources */,
 				8DA4E1EC276954740075E1FA /* Dictionary.swift in Sources */,
 				8DA4E1ED276954750075E1FA /* print.swift in Sources */,
+				8DA9F873293EF55F00661921 /* Challenge2022Day5Solver.swift in Sources */,
 				8DA4E1E62769545A0075E1FA /* Challenge2021Day10Solver.swift in Sources */,
 				8DA4E1DB2769545A0075E1FA /* Challenge2021Day16Solver.swift in Sources */,
+				8DA9F868293EF55F00661921 /* Challenge2022Day20Solver.swift in Sources */,
+				8DA9F878293EF55F00661921 /* Challenge2022Day2Solver.swift in Sources */,
 				8DA4E1E12769545A0075E1FA /* Challenge2021Day5Solver.swift in Sources */,
 				8DA4E1E42769545A0075E1FA /* Challenge2021Day17Solver.swift in Sources */,
 				8DA4E1C1276954530075E1FA /* Challenge2020Day10Solver.swift in Sources */,
 				8DA4E1F627695C990075E1FA /* Solutions2020.swift in Sources */,
+				8DA9F864293EF45400661921 /* Solutions2022.swift in Sources */,
 				8DA4E1FE27696E400075E1FA /* Inputs2021.swift in Sources */,
 				8DA4E1C3276954530075E1FA /* Challenge2020Day17Solver.swift in Sources */,
+				8DA9F866293EF55F00661921 /* Challenge2022Day16Solver.swift in Sources */,
 				8D10D17827710F7F000812D2 /* MutableCollection+3d.swift in Sources */,
 				8DA4E1EB2769545A0075E1FA /* Challenge2021Day15Solver.swift in Sources */,
+				8DA9F870293EF55F00661921 /* Challenge2022Day1Solver.swift in Sources */,
 				8DA4E1B7276954380075E1FA /* ChallengeNumber.swift in Sources */,
 				8DA4E1BE276954530075E1FA /* Challenge2020Day3Solver.swift in Sources */,
 				8D10D16A2770F260000812D2 /* RangeReplaceableCollection+2d.swift in Sources */,
 				8DA4E1D52769545A0075E1FA /* Challenge2021Day18Solver.swift in Sources */,
 				8D10D16C2770F265000812D2 /* RangeReplaceableCollection+4d.swift in Sources */,
 				8DA4E1CF276954530075E1FA /* Challenge2020Day12Solver.swift in Sources */,
+				8DA9F87D293EF55F00661921 /* Challenge2022Day10Solver.swift in Sources */,
+				8DA9F877293EF55F00661921 /* Challenge2022Day14Solver.swift in Sources */,
 				8DA4E1C7276954530075E1FA /* Challenge2020Day21Solver.swift in Sources */,
+				8DA9F872293EF55F00661921 /* Challenge2022Day21Solver.swift in Sources */,
 				8DA4E1BA276954430075E1FA /* Challenge2020Day1Solver.swift in Sources */,
+				8DA9F87E293EF55F00661921 /* Challenge2022Day4Solver.swift in Sources */,
 				8DA4E1C8276954530075E1FA /* Challenge2020Day25Solver.swift in Sources */,
 				8DA4E1E02769545A0075E1FA /* Challenge2021Day1Solver.swift in Sources */,
+				8DA9F86B293EF55F00661921 /* Challenge2022Day6Solver.swift in Sources */,
 				8DA4E1BF276954530075E1FA /* Challenge2020Day7Solver.swift in Sources */,
 				8DA4E1E92769545A0075E1FA /* Challenge2021Day2Solver.swift in Sources */,
 				8DA4E1DE2769545A0075E1FA /* Challenge2021Day8Solver.swift in Sources */,
@@ -607,8 +752,10 @@
 				8DA4E1E82769545A0075E1FA /* Challenge2021Day14Solver.swift in Sources */,
 				8DA4E1BD276954530075E1FA /* Challenge2020Day16Solver.swift in Sources */,
 				8DA4E1D82769545A0075E1FA /* Challenge2021Day11Solver.swift in Sources */,
+				8DA9F867293EF55F00661921 /* Challenge2022Day22Solver.swift in Sources */,
 				8DA4E1E22769545A0075E1FA /* Challenge2021Day21Solver.swift in Sources */,
 				8DA4E1BB2769544C0075E1FA /* Challenge2020Day2Solver.swift in Sources */,
+				8DA9F87B293EF55F00661921 /* Challenge2022Day25Solver.swift in Sources */,
 				8DA4E1DF2769545A0075E1FA /* Challenge2021Day4Solver.swift in Sources */,
 				8DCAB95A276D253200CB1BCD /* popFirst.swift in Sources */,
 				8D6C2417276A86ED00F6165F /* Collection+2d.swift in Sources */,
@@ -616,10 +763,13 @@
 				8DCAB954276BABE600CB1BCD /* Collection+4d.swift in Sources */,
 				8DA4E1CA276954530075E1FA /* Challenge2020Day14Solver.swift in Sources */,
 				8DA4E1B5276954330075E1FA /* ChallengeDay.swift in Sources */,
+				8DA9F879293EF55F00661921 /* Challenge2022Day23Solver.swift in Sources */,
 				8DA4E1F2276954750075E1FA /* Point.swift in Sources */,
+				8DA9F871293EF55F00661921 /* Challenge2022Day9Solver.swift in Sources */,
 				8DA4E1CD276954530075E1FA /* Challenge2020Day20Solver.swift in Sources */,
 				8DA4E1DA2769545A0075E1FA /* Challenge2021Day12Solver.swift in Sources */,
 				8DA4E1D0276954530075E1FA /* Challenge2020Day24Solver.swift in Sources */,
+				8DA9F869293EF55F00661921 /* Challenge2022Day8Solver.swift in Sources */,
 				8DA4E1F0276954750075E1FA /* Collection.swift in Sources */,
 				8DA4E1C9276954530075E1FA /* Challenge2020Day4Solver.swift in Sources */,
 				8D6C2416276A86EA00F6165F /* Collection+3d.swift in Sources */,
@@ -628,6 +778,7 @@
 				8DA4E1EA2769545A0075E1FA /* Challenge2021Day7Solver.swift in Sources */,
 				8DA4E1C2276954530075E1FA /* Challenge2020Day15Solver.swift in Sources */,
 				8DA4E1F427695C6F0075E1FA /* Inputs2020.swift in Sources */,
+				8DA9F876293EF55F00661921 /* Challenge2022Day13Solver.swift in Sources */,
 				8DA4E1CC276954530075E1FA /* Challenge2020Day19Solver.swift in Sources */,
 				8DA4E1C4276954530075E1FA /* Challenge2020Day22Solver.swift in Sources */,
 				8DA4E1EF276954750075E1FA /* String.swift in Sources */,
@@ -635,19 +786,25 @@
 				8DA4E1E72769545A0075E1FA /* Challenge2021Day24Solver.swift in Sources */,
 				8DA4E1CE276954530075E1FA /* Challenge2020Day23Solver.swift in Sources */,
 				8DA4E1D92769545A0075E1FA /* Challenge2021Day3Solver.swift in Sources */,
+				8DA9F863293EF45400661921 /* AdventOfCodeTests2022.swift in Sources */,
 				8DA4E1F927696DC20075E1FA /* AdventOfCodeTests2020.swift in Sources */,
 				8DA4E1B6276954350075E1FA /* ChallengeYear.swift in Sources */,
 				8DA4E1C0276954530075E1FA /* Challenge2020Day6Solver.swift in Sources */,
 				8DA4E1DD2769545A0075E1FA /* Challenge2021Day13Solver.swift in Sources */,
 				8D10D17727710F7F000812D2 /* MutableCollection+2d.swift in Sources */,
+				8DA9F86A293EF55F00661921 /* Challenge2022Day15Solver.swift in Sources */,
+				8DA9F865293EF45400661921 /* Inputs2022.swift in Sources */,
 				8DA4E1D42769545A0075E1FA /* Challenge2021Day25Solver.swift in Sources */,
 				8DA4E1D62769545A0075E1FA /* Challenge2021Day23Solver.swift in Sources */,
 				8D10D17927710F7F000812D2 /* MutableCollection+4d.swift in Sources */,
+				8DA9F86E293EF55F00661921 /* Challenge2022Day7Solver.swift in Sources */,
 				8DA4E1AE27694CEB0075E1FA /* AdventOfCodeTests.swift in Sources */,
 				8DA4E1CB276954530075E1FA /* Challenge2020Day13Solver.swift in Sources */,
+				8DA9F86F293EF55F00661921 /* Challenge2022Day24Solver.swift in Sources */,
 				8D10D17627710F7F000812D2 /* MutableCollection.swift in Sources */,
 				8DA4E1B92769543F0075E1FA /* ChallengeSolver.swift in Sources */,
 				8DA4E1D72769545A0075E1FA /* Challenge2021Day20Solver.swift in Sources */,
+				8DA9F87C293EF55F00661921 /* Challenge2022Day17Solver.swift in Sources */,
 				8DA4E1B82769543A0075E1FA /* Challenge.swift in Sources */,
 				8DA4E1D32769545A0075E1FA /* Challenge2021Day22Solver.swift in Sources */,
 				8DA4E1D2276954530075E1FA /* Challenge2020Day11Solver.swift in Sources */,
@@ -662,24 +819,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA9F858293EF18800661921 /* Challenge2022Day14Solver.swift in Sources */,
+				8DA9F849293EF18800661921 /* Challenge2022Day17Solver.swift in Sources */,
 				8DF48EFA2760127700D46B61 /* Point.swift in Sources */,
 				8D6C2419276A9A9900F6165F /* Collection+4d.swift in Sources */,
 				8DF48EDF275F1F6C00D46B61 /* Challenge2020Day18Solver.swift in Sources */,
 				8DF48EDD275F1F6C00D46B61 /* Challenge2020Day8Solver.swift in Sources */,
 				8DF48EC4275F1EE500D46B61 /* Challenge2021Day15Solver.swift in Sources */,
+				8D10D17B27719334000812D2 /* OtherSolution.swift in Sources */,
 				8DF48EF1276011F400D46B61 /* print.swift in Sources */,
 				8DF48EE8275F1F6C00D46B61 /* Challenge2020Day13Solver.swift in Sources */,
+				8DA9F84F293EF18800661921 /* Challenge2022Day19Solver.swift in Sources */,
 				8DF48E6F27594E4900D46B61 /* ChallengeDay.swift in Sources */,
+				8DA9F84B293EF18800661921 /* Challenge2022Day13Solver.swift in Sources */,
 				8DF48EC0275F1EE500D46B61 /* Challenge2021Day25Solver.swift in Sources */,
 				8DF48EB9275F1EE500D46B61 /* Challenge2021Day11Solver.swift in Sources */,
 				8DF48EBE275F1EE500D46B61 /* Challenge2021Day13Solver.swift in Sources */,
+				8DA9F85A293EF18800661921 /* Challenge2022Day25Solver.swift in Sources */,
+				8DA9F846293EF18800661921 /* Challenge2022Day4Solver.swift in Sources */,
 				8DF48E652759369400D46B61 /* Challenge2021Day1Solver.swift in Sources */,
 				8DF48EDE275F1F6C00D46B61 /* Challenge2020Day17Solver.swift in Sources */,
+				8DA9F85B293EF18800661921 /* Challenge2022Day24Solver.swift in Sources */,
 				8DA4E204276A7E030075E1FA /* Collection+3d.swift in Sources */,
 				8DF48E8D275AB94600D46B61 /* ChallengeYear.swift in Sources */,
 				8DF48EB4275F1EE500D46B61 /* Challenge2021Day23Solver.swift in Sources */,
 				8DF48EDC275F1F6C00D46B61 /* Challenge2020Day14Solver.swift in Sources */,
 				8DF48E9E275F1D3400D46B61 /* Challenge2021Day7Solver.swift in Sources */,
+				8DA9F859293EF18800661921 /* Challenge2022Day9Solver.swift in Sources */,
 				8DF48E98275C08F800D46B61 /* Challenge2021Day4Solver.swift in Sources */,
 				8DF48EE5275F1F6C00D46B61 /* Challenge2020Day23Solver.swift in Sources */,
 				8D10D1722770F2D9000812D2 /* MutableCollection+4d.swift in Sources */,
@@ -690,40 +856,54 @@
 				8DF48EBB275F1EE500D46B61 /* Challenge2021Day17Solver.swift in Sources */,
 				8DF48EB6275F1EE500D46B61 /* Challenge2021Day24Solver.swift in Sources */,
 				8DF48EED275F1F6C00D46B61 /* Challenge2020Day22Solver.swift in Sources */,
+				8DA9F850293EF18800661921 /* Challenge2022Day16Solver.swift in Sources */,
+				8DA9F855293EF18800661921 /* Challenge2022Day12Solver.swift in Sources */,
 				8DCAB959276D23E700CB1BCD /* popFirst.swift in Sources */,
 				8DF48EEB275F1F6C00D46B61 /* Challenge2020Day20Solver.swift in Sources */,
 				8DF48EC2275F1EE500D46B61 /* Challenge2021Day9Solver.swift in Sources */,
 				8DF48EE6275F1F6C00D46B61 /* Challenge2020Day10Solver.swift in Sources */,
 				8DF48EBD275F1EE500D46B61 /* Challenge2021Day18Solver.swift in Sources */,
+				8DA9F85C293EF18800661921 /* Challenge2022Day11Solver.swift in Sources */,
 				8DF48E6D27594DDC00D46B61 /* ChallengeSolver.swift in Sources */,
+				8DA9F85D293EF18800661921 /* Challenge2022Day5Solver.swift in Sources */,
+				8DA9F852293EF18800661921 /* Challenge2022Day3Solver.swift in Sources */,
 				8D10D1672770E4D5000812D2 /* RangeReplaceableCollection+3d.swift in Sources */,
 				8DF48EA2275F1ED800D46B61 /* Challenge2021Day8Solver.swift in Sources */,
 				8DF48EC1275F1EE500D46B61 /* Challenge2021Day10Solver.swift in Sources */,
+				8DA9F84A293EF18800661921 /* Challenge2022Day1Solver.swift in Sources */,
 				8DF48EF32760120100D46B61 /* RangeReplaceableCollection.swift in Sources */,
 				8DF48EE1275F1F6C00D46B61 /* Challenge2020Day16Solver.swift in Sources */,
 				8DF48EBA275F1EE500D46B61 /* Challenge2021Day22Solver.swift in Sources */,
 				8DF48E94275AC83500D46B61 /* Challenge2020Day2Solver.swift in Sources */,
 				8DF48E92275ABD6600D46B61 /* Challenge2020Day1Solver.swift in Sources */,
+				8DA9F856293EF18800661921 /* Challenge2022Day23Solver.swift in Sources */,
 				8DF48E96275B1FB700D46B61 /* Challenge2020Day3Solver.swift in Sources */,
 				8DCAB956276BF50C00CB1BCD /* MutableCollection.swift in Sources */,
+				8DA9F857293EF18800661921 /* Challenge2022Day18Solver.swift in Sources */,
 				8DF48EB5275F1EE500D46B61 /* Challenge2021Day14Solver.swift in Sources */,
 				8DF48EEC275F1F6C00D46B61 /* Challenge2020Day21Solver.swift in Sources */,
 				8DF48E712759504200D46B61 /* ChallengeNumber.swift in Sources */,
+				8DA9F85E293EF18800661921 /* Challenge2022Day7Solver.swift in Sources */,
 				8DA4E202276A7DDF0075E1FA /* Collection+2d.swift in Sources */,
 				8D10D16E2770F2CB000812D2 /* MutableCollection+2d.swift in Sources */,
 				8DF48E6B27594DCE00D46B61 /* Challenge2021Day2Solver.swift in Sources */,
 				8DF48EB8275F1EE500D46B61 /* Challenge2021Day16Solver.swift in Sources */,
+				8DA9F853293EF18800661921 /* Challenge2022Day2Solver.swift in Sources */,
 				8DF48E682759492D00D46B61 /* String.swift in Sources */,
 				8DF48EEE275F1F6C00D46B61 /* Challenge2020Day24Solver.swift in Sources */,
 				8DF48EDB275F1F6C00D46B61 /* Challenge2020Day7Solver.swift in Sources */,
 				8DF48E9A275C7C6300D46B61 /* Challenge2021Day5Solver.swift in Sources */,
 				8DF48EE9275F1F6C00D46B61 /* Challenge2020Day11Solver.swift in Sources */,
 				8DF48EE2275F1F6C00D46B61 /* Challenge2020Day25Solver.swift in Sources */,
+				8DA9F84D293EF18800661921 /* Challenge2022Day20Solver.swift in Sources */,
+				8DA9F854293EF18800661921 /* Challenge2022Day6Solver.swift in Sources */,
 				8DF48EB7275F1EE500D46B61 /* Challenge2021Day12Solver.swift in Sources */,
 				8DF48EBC275F1EE500D46B61 /* Challenge2021Day20Solver.swift in Sources */,
 				8DF48E8F275AB97900D46B61 /* Challenge.swift in Sources */,
 				8DF48EE4275F1F6C00D46B61 /* Challenge2020Day6Solver.swift in Sources */,
 				8D10D1652770E4CA000812D2 /* RangeReplaceableCollection+2d.swift in Sources */,
+				8DA9F84C293EF18800661921 /* Challenge2022Day10Solver.swift in Sources */,
+				8DA9F851293EF18800661921 /* Challenge2022Day15Solver.swift in Sources */,
 				8DCAB952276BA66500CB1BCD /* String+Binary.swift in Sources */,
 				8DF48EE0275F1F6C00D46B61 /* Challenge2020Day19Solver.swift in Sources */,
 				8D10D1702770F2D2000812D2 /* MutableCollection+3d.swift in Sources */,
@@ -737,6 +917,9 @@
 				8DF48EEA275F1F6C00D46B61 /* Challenge2020Day12Solver.swift in Sources */,
 				8DF48E9C275DCF1500D46B61 /* Challenge2021Day6Solver.swift in Sources */,
 				8DF48EE7275F1F6C00D46B61 /* Challenge2020Day15Solver.swift in Sources */,
+				8DA9F847293EF18800661921 /* Challenge2022Day21Solver.swift in Sources */,
+				8DA9F84E293EF18800661921 /* Challenge2022Day8Solver.swift in Sources */,
+				8DA9F848293EF18800661921 /* Challenge2022Day22Solver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,7 +932,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5CMYR89JNU;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = E9QX69DKG5;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -771,7 +955,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5CMYR89JNU;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = E9QX69DKG5;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -821,6 +1006,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -882,6 +1068,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -908,7 +1095,8 @@
 				CODE_SIGN_ENTITLEMENTS = AdventOfCode/AdventOfCode.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CMYR89JNU;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = E9QX69DKG5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -921,7 +1109,8 @@
 				CODE_SIGN_ENTITLEMENTS = AdventOfCode/AdventOfCode.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CMYR89JNU;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = E9QX69DKG5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -10,6 +10,7 @@ import Foundation
 enum ChallengeYear: Int, CaseIterable {
   case twentyTwenty = 2020
   case twentyTwentyOne = 2021
+  case twentyTwentyTwo = 2022
 }
 
 extension ChallengeYear: Comparable {
