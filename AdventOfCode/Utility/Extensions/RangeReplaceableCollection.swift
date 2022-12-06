@@ -90,3 +90,15 @@ extension RangeReplaceableCollection {
     self = Self(self.enumerated().compactMap({ indexOffsets.contains($0) ? nil : $1 }))
   }
 }
+
+// MARK: - Splitting
+extension RangeReplaceableCollection {
+  func splitInHalf() -> [Self] {
+    let ct = self.count
+    let half = index(startIndex, offsetBy: ct / 2)
+
+    let leftSplit = self[startIndex ..< half]
+    let rightSplit = self[half ..< endIndex]
+    return [Self(leftSplit), Self(rightSplit)]
+  }
+}

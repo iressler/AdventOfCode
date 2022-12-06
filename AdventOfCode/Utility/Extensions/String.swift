@@ -69,3 +69,16 @@ extension String {
     return Array(self).map({ String($0) })
   }
 }
+
+
+// MARK: - Splitting
+extension String {
+  func splitInHalf() -> [Self] {
+    let ct = self.count
+    let half = index(startIndex, offsetBy: ct / 2)
+
+    let leftSplit = self[startIndex ..< half]
+    let rightSplit = self[half ..< endIndex]
+    return [Self(leftSplit), Self(rightSplit)]
+  }
+}
