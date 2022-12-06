@@ -7,8 +7,11 @@
 
 import Foundation
 
+import Collections
+
 struct Challenge2022Day6Solver: ChallengeSolver {
   static let defaultValue = """
+mjqjpqmgbljsphdztnvjfqwrcgsmlb
 """
 
   static func solution(number challengeNumber: ChallengeNumber, for input: String) -> String {
@@ -21,11 +24,38 @@ struct Challenge2022Day6Solver: ChallengeSolver {
     }
   }
 
-  static private func getAnswer1(given: [String]) -> String {
-    return ""
+  static private func endIndexOfUniqueCharacters(_ input: String, count: Int) -> Int {
+    var chars = Array(input)
+    guard chars.count >= count else {
+      return -1
+    }
+
+    var lastCountChars = Deque(chars[0..<count])
+    if Set(lastCountChars).count == count {
+      return count
+    }
+
+    var index = count
+    while index <= chars.endIndex {
+      let char = chars[index]
+      lastCountChars.removeFirst()
+      lastCountChars.append(char)
+      if Set(lastCountChars).count == count {
+        break
+      }
+      index += 1
+    }
+
+    return index
   }
 
-  static private func getAnswer2(given: [String]) -> String {
-    return ""
+  static private func getAnswer1(given input: [String]) -> String {
+    // + 1 to account for 0 based indexing.
+    return "\(endIndexOfUniqueCharacters(input.first!, count: 4) + 1)"
+  }
+
+  static private func getAnswer2(given input: [String]) -> String {
+    // + 1 to account for 0 based indexing.
+    return "\(endIndexOfUniqueCharacters(input.first!, count: 14) + 1)"
   }
 }
