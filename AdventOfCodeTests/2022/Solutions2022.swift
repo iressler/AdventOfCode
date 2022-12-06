@@ -10,7 +10,7 @@ import Foundation
 extension AdventOfCodeTests2022 {
   static let solutions: [[String]] = [
     ["24000", "45000"],
-    ["", ""],
+    ["15", "12"],
     ["", ""],
     ["", ""],
     ["", ""],
