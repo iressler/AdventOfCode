@@ -148,6 +148,7 @@
 		8DA9F87C293EF55F00661921 /* Challenge2022Day17Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82F293EF18700661921 /* Challenge2022Day17Solver.swift */; };
 		8DA9F87D293EF55F00661921 /* Challenge2022Day10Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F832293EF18700661921 /* Challenge2022Day10Solver.swift */; };
 		8DA9F87E293EF55F00661921 /* Challenge2022Day4Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9F82C293EF18700661921 /* Challenge2022Day4Solver.swift */; };
+		8DA9F87F293EF91500661921 /* OtherSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D17A27719334000812D2 /* OtherSolution.swift */; };
 		8DCAB952276BA66500CB1BCD /* String+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB951276BA66500CB1BCD /* String+Binary.swift */; };
 		8DCAB953276BABC900CB1BCD /* String+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB951276BA66500CB1BCD /* String+Binary.swift */; };
 		8DCAB954276BABE600CB1BCD /* Collection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2418276A9A9900F6165F /* Collection+4d.swift */; };
@@ -792,6 +793,7 @@
 				8DA4E1C0276954530075E1FA /* Challenge2020Day6Solver.swift in Sources */,
 				8DA4E1DD2769545A0075E1FA /* Challenge2021Day13Solver.swift in Sources */,
 				8D10D17727710F7F000812D2 /* MutableCollection+2d.swift in Sources */,
+				8DA9F87F293EF91500661921 /* OtherSolution.swift in Sources */,
 				8DA9F86A293EF55F00661921 /* Challenge2022Day15Solver.swift in Sources */,
 				8DA9F865293EF45400661921 /* Inputs2022.swift in Sources */,
 				8DA4E1D42769545A0075E1FA /* Challenge2021Day25Solver.swift in Sources */,
