@@ -28,7 +28,7 @@ private struct Instruction {
   let destinationStack: Int
 
   init?(_ line: String) {
-    var words = line.components(separatedBy: " ")
+    let words = line.components(separatedBy: " ")
     guard let createCount = Int(words[1]), let initialStack = Int(words[3]), let destinationStack = Int(words[5]) else {
       return nil
     }

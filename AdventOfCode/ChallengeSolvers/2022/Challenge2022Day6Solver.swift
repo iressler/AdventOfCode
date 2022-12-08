@@ -25,7 +25,7 @@ mjqjpqmgbljsphdztnvjfqwrcgsmlb
   }
 
   static private func endIndexOfUniqueCharacters(_ input: String, count: Int) -> Int {
-    var chars = Array(input)
+    let chars = Array(input)
     guard chars.count >= count else {
       return -1
     }
