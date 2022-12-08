@@ -73,3 +73,10 @@ extension Collection {
     return self[((index % count) + count) % count]
   }
 }
+
+// MARK: - Convenience
+extension Collection {
+  var isNotEmpty: Bool {
+    return !isEmpty
+  }
+}
