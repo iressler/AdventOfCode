@@ -82,3 +82,17 @@ extension String {
     return [Self(leftSplit), Self(rightSplit)]
   }
 }
+
+extension String {
+  func removingFirst(_ k: Int = 1) -> String {
+    var copy = self
+    copy.removeFirst(k)
+    return copy
+  }
+
+  func removingLast(_ k: Int = 1) -> String {
+    var copy = self
+    copy.removeLast(k)
+    return copy
+  }
+}
