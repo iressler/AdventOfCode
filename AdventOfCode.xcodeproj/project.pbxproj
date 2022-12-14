@@ -156,6 +156,7 @@
 		8DA9F88B293FADBE00661921 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 8DA9F88A293FADBE00661921 /* DequeModule */; };
 		8DA9F88D293FADBE00661921 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 8DA9F88C293FADBE00661921 /* OrderedCollections */; };
 		8DBB89D22949022D005BC839 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB89D12949022D005BC839 /* Math.swift */; };
+		8DBB89D329498F79005BC839 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB89D12949022D005BC839 /* Math.swift */; };
 		8DCAB952276BA66500CB1BCD /* String+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB951276BA66500CB1BCD /* String+Binary.swift */; };
 		8DCAB953276BABC900CB1BCD /* String+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB951276BA66500CB1BCD /* String+Binary.swift */; };
 		8DCAB954276BABE600CB1BCD /* Collection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2418276A9A9900F6165F /* Collection+4d.swift */; };
@@ -759,6 +760,7 @@
 				8DA4E1FE27696E400075E1FA /* Inputs2021.swift in Sources */,
 				8DA4E1C3276954530075E1FA /* Challenge2020Day17Solver.swift in Sources */,
 				8DA9F866293EF55F00661921 /* Challenge2022Day16Solver.swift in Sources */,
+				8DBB89D329498F79005BC839 /* Math.swift in Sources */,
 				8D10D17827710F7F000812D2 /* MutableCollection+3d.swift in Sources */,
 				8DA4E1EB2769545A0075E1FA /* Challenge2021Day15Solver.swift in Sources */,
 				8DA9F870293EF55F00661921 /* Challenge2022Day1Solver.swift in Sources */,
