@@ -24,6 +24,7 @@
 		8D6C2416276A86EA00F6165F /* Collection+3d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E203276A7E030075E1FA /* Collection+3d.swift */; };
 		8D6C2417276A86ED00F6165F /* Collection+2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E201276A7DDF0075E1FA /* Collection+2d.swift */; };
 		8D6C2419276A9A9900F6165F /* Collection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2418276A9A9900F6165F /* Collection+4d.swift */; };
+		8D7B90F1294D3DAC00053DEC /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBED3A0294D374100778F5F /* Sequence.swift */; };
 		8DA4E1AE27694CEB0075E1FA /* AdventOfCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA4E1AD27694CEB0075E1FA /* AdventOfCodeTests.swift */; };
 		8DA4E1B5276954330075E1FA /* ChallengeDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E6E27594E4900D46B61 /* ChallengeDay.swift */; };
 		8DA4E1B6276954350075E1FA /* ChallengeYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF48E8C275AB94600D46B61 /* ChallengeYear.swift */; };
@@ -157,6 +158,7 @@
 		8DA9F88D293FADBE00661921 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 8DA9F88C293FADBE00661921 /* OrderedCollections */; };
 		8DBB89D22949022D005BC839 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB89D12949022D005BC839 /* Math.swift */; };
 		8DBB89D329498F79005BC839 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB89D12949022D005BC839 /* Math.swift */; };
+		8DBED3A1294D374100778F5F /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBED3A0294D374100778F5F /* Sequence.swift */; };
 		8DCAB952276BA66500CB1BCD /* String+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB951276BA66500CB1BCD /* String+Binary.swift */; };
 		8DCAB953276BABC900CB1BCD /* String+Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB951276BA66500CB1BCD /* String+Binary.swift */; };
 		8DCAB954276BABE600CB1BCD /* Collection+4d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C2418276A9A9900F6165F /* Collection+4d.swift */; };
@@ -289,6 +291,7 @@
 		8DA9F861293EF45400661921 /* Solutions2022.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solutions2022.swift; sourceTree = "<group>"; };
 		8DA9F862293EF45400661921 /* Inputs2022.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inputs2022.swift; sourceTree = "<group>"; };
 		8DBB89D12949022D005BC839 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		8DBED3A0294D374100778F5F /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		8DCAB951276BA66500CB1BCD /* String+Binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Binary.swift"; sourceTree = "<group>"; };
 		8DCAB955276BF50C00CB1BCD /* MutableCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollection.swift; sourceTree = "<group>"; };
 		8DCAB958276D23E700CB1BCD /* popFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popFirst.swift; sourceTree = "<group>"; };
@@ -604,6 +607,7 @@
 				8D10D1642770E4CA000812D2 /* RangeReplaceableCollection+2d.swift */,
 				8D10D1662770E4D5000812D2 /* RangeReplaceableCollection+3d.swift */,
 				8D10D1682770E4DD000812D2 /* RangeReplaceableCollection+4d.swift */,
+				8DBED3A0294D374100778F5F /* Sequence.swift */,
 				8DF48EF42760120F00D46B61 /* Set.swift */,
 				8DF48E672759492D00D46B61 /* String.swift */,
 				8DCAB951276BA66500CB1BCD /* String+Binary.swift */,
@@ -739,6 +743,7 @@
 			files = (
 				8DA4E1E52769545A0075E1FA /* Challenge2021Day9Solver.swift in Sources */,
 				8DA9F86D293EF55F00661921 /* Challenge2022Day19Solver.swift in Sources */,
+				8D7B90F1294D3DAC00053DEC /* Sequence.swift in Sources */,
 				8DA9F875293EF55F00661921 /* Challenge2022Day12Solver.swift in Sources */,
 				8DA4E1D1276954530075E1FA /* Challenge2020Day8Solver.swift in Sources */,
 				8DA9F86C293EF55F00661921 /* Challenge2022Day3Solver.swift in Sources */,
@@ -949,6 +954,7 @@
 				8DF48EF72760121D00D46B61 /* Dictionary.swift in Sources */,
 				8D10D1692770E4DD000812D2 /* RangeReplaceableCollection+4d.swift in Sources */,
 				8DF48EE3275F1F6C00D46B61 /* Challenge2020Day5Solver.swift in Sources */,
+				8DBED3A1294D374100778F5F /* Sequence.swift in Sources */,
 				8DF48EC3275F1EE500D46B61 /* Challenge2021Day21Solver.swift in Sources */,
 				8DBB89D22949022D005BC839 /* Math.swift in Sources */,
 				8DF48EEA275F1F6C00D46B61 /* Challenge2020Day12Solver.swift in Sources */,
